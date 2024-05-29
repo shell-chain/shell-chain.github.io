@@ -1,0 +1,660 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #fff;
+    margin: 0;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 10px 0;
+}
+
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+    
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li img {
+    border-radius: 50%;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#new-button {
+    display: inline-block;
+    background-color: #1f1f1f;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#new-button:hover {
+    background-color: #0f0f0f; /* новый цвет фона при наведении */
+}
+
+#new-button:active {
+    background-color: #000000; /* цвет фона при нажатии */
+}
+
+.discord-button {
+    position: absolute;
+    top: 20px; /* Отступ сверху */
+    right: 100px; /* Отступ справа */
+    display: inline-block;
+    background-color: #1f1f1f;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.discord-button:hover {
+    background-color: #0f0f0f;
+}
+
+.discord-button .button-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('images/Ava_d.png') no-repeat center center;
+    background-size: cover;
+}
+
+.hero {
+    text-align: center;
+    padding: 220px 20px;
+    background: url('images/background.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Важно добавить это */
+}
+
+
+footer {
+    background-color: #2b2b2b;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Отступ между элементами */
+    
+}
+
+.footer-section {
+    margin: 10px;
+    text-align: center;
+    flex: 1 1 auto; /* flex-basis: auto; */
+    max-width: 300px; /* Максимальная ширина элемента */
+}
+
+
+.footer-section {
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: #00e676;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-background {
+    position: absolute;
+    bottom: -750;
+    left: 0;
+    width: 100%;
+    height: 250px; /* Высота фото зади */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(34, 85, 60) 100%);
+    background-size: cover;
+    z-index: -1; /* Установка z-index для размещения под другими элементами */
+}
+
+.contact-info {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center; /* Центрирование текста */
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #00e676;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-content {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+
+.main-content {
+    min-height: 135vh; /* Минимальная высота равная высоте окна браузера */
+}
+
+.centered-text {
+    min-height: 15vh; /* Минимальная высота для центрирования по вертикали */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.centered-text h2 {
+    font-size: 46px;
+    color: #c06666;
+    margin-bottom: 20px;
+}
+
+.centered-text .small-text {
+    font-size: 21px;
+    color: #ffffff;
+}
+
+.centered-text2 {
+    min-height: 30vh; /* Минимальная высота для центрирования по вертикали */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.centered-text2 h2 {
+    font-size: 46px;
+    color: #96cc94;
+    margin-bottom: 20px;
+}
+
+.centered-text2 .small-text2 {
+    font-size: 21px;
+    color: #ffffff;
+}
+
+nav ul li a[href="wiki.html"] {
+    color: #00e676; /* Красный цвет текста */
+}
+
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) { /* Примерный порог ширины для мобильных устройств */
+    .center-image {
+        display: none; /* Скрываем блок с изображением */
+    }
+}
+@media (min-width: 768px) { /* Примерный порог ширины для мобильных устройств */
+    .title_text {
+        display: none; /* Скрываем блок с изображением */
+    }
+}
+@media (max-width: 768px) { /* Примерный порог ширины для мобильных устройств */
+    .discord-button {
+        display: none; /* Скрываем блок с изображением */
+    }
+}
+
+@media (max-width: 668px) { /* Примерный порог ширины для мобильных устройств */
+    .footer-background {
+        display: none; /* Скрываем блок с изображением */
+    }
+}
+
+/* Уменьшение текста при ширине окна 668px или меньше */
+@media (max-width: 668px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .centered-text h2,
+    .centered-text2 h2 {
+        font-size: 28px;
+    }
+
+    .centered-text .small-text,
+    .centered-text2 .small-text2 {
+        font-size: 16px;
+    }
+
+    .footer-section h3 {
+        font-size: 20px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 14px;
+    }
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.category-button {
+    background-color: #2b2b2b;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #00e676;
+}
+
+.category-button.active {
+    background-color: #00e676;
+    margin-bottom: 10px; /* Добавляем отступ снизу для разделения кнопки и вопросов */
+}
+
+.recipe-info {
+    display: none; /* Скрываем информацию до нажатия кнопки */
+    margin-top: 10px;
+    max-width: 400px; /* Ограничиваем максимальную ширину */
+    overflow: hidden; /* Прячем содержимое, которое выходит за границы */
+    margin: 0 auto; /* Центрируем блок по горизонтали */
+}
+
+.question {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: center; /* Выравниваем текст вопроса по центру */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden; /* Добавляем, чтобы элемент не занимал место после исчезновения */
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fadeOut {
+    animation: fadeOut 0.5s forwards;
+    visibility: hidden; /* Добавляем, чтобы элемент не занимал место после исчезновения */
+}
+
+
+
+.question {
+    opacity: 0;
+    animation-fill-mode: forwards; /* Сохраняем последнее состояние анимации */
+}
+
+.question.fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+.question.fadeOut {
+    animation: fadeOut 0.5s forwards;
+}
+
+
+
+
+
+
+.question h4 {
+    color: #00e676;
+    margin-bottom: 5px;
+}
+
+.question p {
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+    .recipe-info {
+        width: 80%; /* Увеличиваем ширину контейнера на больших экранах */
+    }
+}
+
+/* Другие стили */
+#recipe-buttons-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Анимация для кнопок */
+.recipe-button {
+    background-color: #2b2b2b;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-button:hover {
+    background-color: #00e676;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для активной кнопки */
+.recipe-button.active {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+
+/* Стили для секции с кнопками рецептов */
+#recipe-buttons-section {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Анимация появления */
+.recipe-buttons-section.active {
+    display: flex;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+
+
+.recipe-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.recipe-images {
+    margin-top: 10px;
+}
+
+.recipe-images img {
+    width: 300px; /* Размер изображений можно настроить под свои нужды */
+    border: 5px solid #00e676; /* Рамочка вокруг изображений */
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для появления и исчезновения */
+
+@media (max-width: 768px) { /* Примерный порог ширины для мобильных устройств */
+    .center-image {
+        display: none; /* Скрываем блок с изображением */
+    }
+}
+@media (min-width: 768px) { /* Примерный порог ширины для мобильных устройств */
+    .title_text {
+        display: none; /* Скрываем блок с изображением */
+    }
+}
+
+
+.server-info {
+    background-color: #2b2b2b;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 800px; /* Максимальная ширина блока */
+    margin-left: auto; /* Центрирование блока */
+    margin-right: auto; /* Центрирование блока */
+    overflow: hidden; /* Обрезаем содержимое, которое выходит за пределы */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для блока */
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-block {
+    flex: 1;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+.image-block {
+    flex: 1;
+    text-align: center;
+}
+
+.image-block img {
+    max-width: 100%;
+    border: 5px solid #52915f; /* Красная рамка */
+    border-radius: 10px;
+}
+
+.image-caption {
+    color: #c06666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Уникальные стили для каждого блока */
+.text-block h3 {
+    color: #00e676; /* Ярко зеленый цвет */
+}
+
+/* Отступы между секциями */
+.hero,
+.centered-text,
+.server-info {
+    margin-bottom: 20px; /* Отступ между разными секциями */
+}
+
+
+/* Existing CSS here... */
+
+/* Existing CSS here... */
+
+/* Style for the hidden section initially */
+.b {
+    display: none; /* Hide the section initially */
+    padding: 20px;
+    background-color: #2b2b2b;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center; /* Center the content inside the section */
+    max-width: 800px; /* Set maximum width for the section */
+    margin: 10px auto; /* Center the section itself */
+}
+
+/* Style to show the section when it has the 'visible' class */
+.b.visible {
+    display: block;
+}
+.b h1 {
+    font-size: 14px;
+}
+.b h2 {
+    font-size: 30px;
+    color: #00e676; /* Ярко зеленый цвет */
+}
+/* Additional CSS for images */
+.recipe-images img {
+    width: 300px; /* Adjust size as needed */
+    border: 5px solid #507c67;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.d {
+    display: none; /* Hide the section initially */
+    padding: 20px;
+    background-color: #2b2b2b;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center; /* Center the content inside the section */
+    max-width: 800px; /* Set maximum width for the section */
+    margin: 10px auto; /* Center the section itself */
+}
+
+/* Style to show the section when it has the 'visible' class */
+.d.visible {
+    display: block;
+}
+.d h1 {
+    font-size: 14px;
+}
+.d h2 {
+    font-size: 30px;
+    color: #00e676; /* Ярко зеленый цвет */
+}
+
+/* Анимация для появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для исчезновения */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden; /* Добавляем, чтобы элемент не занимал место после исчезновения */
+    }
+}
+
+/* Стиль для активной секции */
+.b.visible,
+.d.visible {
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Стиль для скрытой секции */
+.b,
+.d {
+    display: none; /* Скрыть секцию по умолчанию */
+    animation: fadeOut 0.5s forwards;
+}

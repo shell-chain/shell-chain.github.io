@@ -1,0 +1,296 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #fff;
+    margin: 0;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 10px 0;
+}
+
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+    
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li img {
+    border-radius: 50%;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#new-button {
+    display: inline-block;
+    background-color: #1f1f1f;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#new-button:hover {
+    background-color: #0f0f0f; /* новый цвет фона при наведении */
+}
+
+#new-button:active {
+    background-color: #000000; /* цвет фона при нажатии */
+}
+
+.discord-button {
+    position: absolute;
+    top: 20px; /* Отступ сверху */
+    right: 100px; /* Отступ справа */
+    display: inline-block;
+    background-color: #1f1f1f;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.discord-button:hover {
+    background-color: #0f0f0f;
+}
+
+.discord-button .button-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('images/Ava_d.png') no-repeat center center;
+    background-size: cover;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 180px 20px;
+    background: url('images/background.jpg') no-repeat center center;
+    background-size: cover;
+
+}
+
+
+footer {
+    background-color: #2b2b2b;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: #00e676;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-background {
+    position: absolute;
+    bottom: -750;
+    left: 0;
+    width: 100%;
+    height: 250px; /* Высота фото зади */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(34, 85, 60) 100%);
+    background-size: cover;
+    z-index: -1; /* Установка z-index для размещения под другими элементами */
+}
+
+.contact-info {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center; /* Центрирование текста */
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #00e676;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    background-color: #00e676;
+    border: none;
+    padding: 15px 30px;
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+
+.buttons button:hover {
+    background-color: #00c853;
+}
+
+.buttons button:active {
+    background-color: #00913c;
+}
+
+
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-content {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+
+.main-content {
+    min-height: 125vh; /* Минимальная высота равная высоте окна браузера */
+}
+
+.centered-text {
+    min-height: 15vh; /* Минимальная высота для центрирования по вертикали */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.centered-text h2 {
+    font-size: 46px;
+    color: #c06666;
+    margin-bottom: 20px;
+}
+
+.centered-text .small-text {
+    font-size: 21px;
+    color: #ffffff;
+}
+
+.centered-text2 {
+    min-height: 30vh; /* Минимальная высота для центрирования по вертикали */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.centered-text2 h2 {
+    font-size: 46px;
+    color: #96cc94;
+    margin-bottom: 20px;
+}
+
+.centered-text2 .small-text2 {
+    font-size: 21px;
+    color: #ffffff;
+}
+
+nav ul li a[href="index.html"] {
+    color: #00e676; /* Красный цвет текста */
+}
+
+@media (max-width: 668px) { /* Примерный порог ширины для мобильных устройств */
+    .discord-button {
+        display: none; /* Скрываем блок с изображением */
+    }
+}
+@media (max-width: 668px) { /* Примерный порог ширины для мобильных устройств */
+    .footer-background {
+        display: none; /* Скрываем блок с изображением */
+    }
+}
+
+/* Уменьшение текста при ширине окна 668px или меньше */
+@media (max-width: 668px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .centered-text h2,
+    .centered-text2 h2 {
+        font-size: 28px;
+    }
+
+    .centered-text .small-text,
+    .centered-text2 .small-text2 {
+        font-size: 16px;
+    }
+
+    .footer-section h3 {
+        font-size: 20px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 14px;
+    }
+}
