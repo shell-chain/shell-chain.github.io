@@ -147,6 +147,7 @@ footer {
 }
 
 .contact-info {
+    margin-top: 20px; /* Отступ сверху для контактной информации */
     color: #ffffff;
     font-size: 16px;
     margin-top: 10px;
@@ -157,6 +158,14 @@ footer {
     margin: 5px 0;
 }
 
+#contact-info a {
+    color: #00e676;
+    text-decoration: none;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
 
 .hero h1 {
     font-size: 48px;
@@ -194,7 +203,7 @@ footer {
 
 
 .main-content {
-    min-height: 115vh; /* Минимальная высота равная высоте окна браузера */
+    min-height: 123vh; /* Минимальная высота равная высоте окна браузера */
 }
 
 .centered-text {
@@ -358,12 +367,10 @@ nav ul li a[href="wiki.html"] {
     max-width: 400px;
     margin-top: 10px;
     text-align: center; /* Выравниваем текст вопроса по центру */
-}
-
-
-.question {
+    margin-bottom: 10px; /* Добавляем отступ снизу */
     animation-fill-mode: forwards; /* Сохраняем последнее состояние анимации */
 }
+
 
 .question h4 {
     color: #00e676;

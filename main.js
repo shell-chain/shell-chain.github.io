@@ -1,6 +1,6 @@
 document.getElementById('copy-ip').addEventListener('click', () => {
-    const ip = "Сервер еще не открылся";
+    const ip = "Сервер ще не відкрився";
     navigator.clipboard.writeText(ip).then(() => {
-        alert('IP адрес скопирован: ' + ip);
+        alert('IP адресу скопійовано: ' + ip);
     });
 });
