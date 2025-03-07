@@ -3,7 +3,6 @@
 body {
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 
@@ -79,7 +78,6 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 
@@ -295,4 +293,9 @@ li.fade{
 
 .flag:hover {
   opacity: 0.8;
+}
+
+.delay {
+  width: auto;
+  height: 5vh;
 }
