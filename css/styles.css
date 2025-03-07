@@ -1,0 +1,298 @@
+
+/* Основные стили для тела */
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Прокаченный стиль для футера */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.hero-section {
+  margin: 0;
+  box-sizing: border-box;
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center; /* Вертикальное центрирование */
+  display: flex;
+  background-color: #383838;
+  padding: 100px 0;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+  background-image: url('/images/night.png'); /* Указываем путь к картинке */
+  background-position: center; /* Центрируем картинку */
+  background-size: cover; /* Растягиваем картинку по всей секции */
+  background-attachment: fixed; /* Фиксируем картинку при скролле */
+}
+
+.hero-section .layer {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+  
+.hero-section .logo {
+    z-index: 12; /* Передний слой */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh); /* Снег падает до нижней части экрана */
+    }
+}
+
+ 
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg); /* Начальная позиция (не вращается) */
+    }
+    100% {
+      transform: rotate(360deg); /* Вращение на 360 градусов */
+    }
+  }
+
+
+
+  /* Основные стили для тела */
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Стили для кнопки смены темы (если она есть) */
+.theme-switch {
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #00000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+/* Стили для темной и светлой темы */
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+/* Прокаченный стиль для футера */
+footer {  
+  margin-top: 60px;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Стили для контейнера ссылок */
+.navbar .links {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px; /* Расстояние между вкладками */
+
+  margin-top: 10px;
+
+  position: relative;
+}
+
+/* Стили для ссылок-закладок */
+.navbar .links a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #575757;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 2px solid transparent;
+  transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+/* Эффект при наведении на вкладку */
+.navbar .links a:hover {
+  background-color: #8f8f8f;
+  border-bottom: 2px solid #fff;
+}
+
+/* Стили для активной вкладки */
+.navbar .links a.active {
+  background-color: #818181;
+  border-bottom: 2px solid white;
+}
+/* Стили для иконок */
+.navbar .links a i {
+  margin-right: 8px; /* Отступ для иконок */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 0px 10px;
+}
+
+.links a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.links a:hover {
+  color: #f0a500;
+}
+
+.active {
+  font-weight: bold;
+}
+/* Social links styles */
+.social-links, .social-link  a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 4vb;
+}
+
+.social-links, .social-link  a:hover {
+  color: rgb(218, 255, 241);
+}
+
+.social-links, .social-link {
+  gap:20px;
+display: flex;
+}
+.layer-logo {
+  max-width: 60%;
+}
+.log {
+  width: 300px;
+}
+
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+  width: 30px;
+  height:3px;
+  background: #f2f5f7;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger{
+      display:block;
+      position: relative;
+      cursor: pointer;
+      top: 13px;
+      transform: translate(-5%, -50%);
+      z-index: 32;
+      transition: all 0.7s ease;
+}
+  
+li.fade{
+      opacity: 1;
+}
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  transition: all 0.7s ease;
+  width:0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.flags {
+  display: none;
+  content: ''; /* Создаем пустой контент */
+  position: absolute;
+  top: 40px;
+  left: -6px;
+  background-color: rgb(54, 54, 54);
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0); /* Прозрачный черный фон */
+  padding: 5px;
+  z-index: 1;
+}
+.flags::before {
+  content: ''; /* Создаем пустой контент */
+  position: absolute; /* Абсолютное позиционирование относительно родителя */
+
+  overflow: hidden; /* Чтобы элементы не выходили за пределы контейнера */
+  top: 0;
+  left: 0;
+  width: 100%;
+  filter: blur(5px); /* Применяем размытие */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.274); /* Прозрачный черный фон */
+
+  z-index: -1; /* Псевдо-элемент должен быть за содержимым */
+}
+.lang-switcher:hover .flags {
+  display: block;
+}
+
+.flag {
+  position: relative; /* Чтобы псевдо-элемент был позиционирован относительно родителя */
+  overflow: hidden; /* Чтобы элементы не выходили за пределы контейнера */
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  width: 45px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.flag img {
+  width: 100%;
+  height: 100%;
+}
+
+.flag:hover {
+  opacity: 0.8;
+}
