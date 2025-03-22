@@ -233,9 +233,7 @@ img {
       }
     }
   }
-  .tl-content p{
-    font-size: 0.4em;
-  }
+
   
   .tl-content {
     transform: translate3d(0, 0, 0) translateY(25px);
