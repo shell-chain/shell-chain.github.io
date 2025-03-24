@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShellChain - Главная</title>
-    <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/06763759a1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/stylesbutton.css">
+    <link rel="stylesheet" href="/css/styles_tel.css">
     <link rel="stylesheet" href="/css/styles_player.css">
     <link rel="icon" type="image/png" href="/logo/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg" />
@@ -28,13 +29,18 @@
                 <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
             </div>
           <div class="links">
-            <a href="index.html" ><i class="fas fa-home"></i>Главная</a>
-            <a href="player.html" class="active"><i class="fas fa-address-book"></i>Игроки</a>
-            <a href="info.html"><i class="fas fa-info-circle"></i>О сервере</a>
-            <a href="secret.html" class="secret"><i class="fa-solid fa-question" ></i></i>Секрет</a>
+            <a href="index.html" ><i class="fas fa-home"></i><span>Главная</span></a>
+            <a href="player.html" class="active"><i class="fas fa-address-book"></i><span>Игроки</span></a>
+            <a href="info.html"><i class="fas fa-info-circle"></i><span>О сервере</span></a>
           </div>
-
-          <div class="social-link">
+          
+          <!-- Гамбургер меню -->
+          <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <div class="social-link2">
             <input type="checkbox" id="checkbox" style="display:none;" />
             <label for="checkbox" class="toggle1">
               <span>
@@ -47,95 +53,357 @@
                   <img src="" alt="Current Language" />
                 </div>
                 <div class="flags">
-                  <div class="flag" data-lang="en">
+                  <div class="flagd" data-lang="en">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="English" />
                   </div>
-                  <div class="flag" data-lang="ru">
+                  <div class="flagd" data-lang="ru">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Russian" />
                   </div>
-                  <div class="flag" data-lang="ua">
+                  <div class="flagd" data-lang="ua">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukraine" />
                   </div>
                 </div>
               </div>
           </div>
+          <div class="menu" id="menu">
+          <div class="social-link3">
+            <div class="checkboxs" style="margin-left: -12%;">
+            <input type="checkbox" id="checkbox2" style="display:none;" />
+            <label for="checkbox2" class="toggle1">
+              <span>
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-lightbulb"></i>
+              </span>
+            </label>
+          </div>
+            <div class="lang-switcher" id="lang-switcher2">
+                <div class="flag" id="current-flag2">
+                  <img src="" alt="Current Language" />
+                </div>
+                <div class="flags">
+                  <div class="flagd" data-lang="en">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="English" />
+                  </div>
+                  <div class="flagd" data-lang="ru">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Russian" />
+                  </div>
+                  <div class="flagd" data-lang="ua">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukraine" />
+                  </div>
+                </div>
+              </div>
+              <div class="social-link4">
+                <a href="https://discord.gg/EPgTFRf7Zn" target="_blank"  class="social"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.youtube.com/@ShellChain" target="_blank"  class="social"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
 
         </nav>
       </header>
-      
     <div class="hero-section" >
         <img src="/images/logo.png" class="layer-logo">
     </div>
-    <div class="delay" >
-    
-    </div>
+    <div class="delay" ></div>
     <section class="content-section">
-      <div id="container">
+  </section>
+  
+  <footer class="footer">
+    <div class="container">
+      <a class="s" style="height: 10px;"></a>
+        <div class="social-link-footer">
+            <a href="https://discord.gg/EPgTFRf7Zn" target="_blank" class="social"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.youtube.com/@ShellChain" target="_blank" class="social"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+
+        <p>Выражаем благодарность <a target="_blank" href="https://fontawesome.com">FontAwesome</a> за предоставление шрифта,</p>
+        <p>распространяемого под лицензией <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+        <p></a></p>
+        <p>ShellChain &copy; 2025 Все права защищены.</p>
+        <p class="creator" ><a target="_blank" href="https://cat-bios.github.io">Сайт создан был создан ArisNow0</a></p>
+    </div>
+</footer>
+
+
+    <script>
+// Проверка текущей темы и установка начального состояния
+const switcher = document.getElementById('checkbox');
+const switcher2 = document.getElementById('checkbox2');
+const body = document.body;
+const heroSection = document.querySelector('.hero-section');
+const navbar = document.querySelector('.navbar');
+const contentSection = document.querySelector('.content-section');
+const footer = document.querySelector('.footer');
+
+
+// Находим элементы на странице
+const glitchText = document.getElementById('glitch-text');
+const glitchText2 = document.getElementById('glitch-tex');
+const secret = document.querySelector('.secret');
+// Проверка сохраненной темы из localStorage или установка по умолчанию
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'dark') {
+  body.classList.add('dark-theme');
+  heroSection.style.backgroundImage = "url('/images/night.png')";
+  navbar.style.backgroundColor = '#333';
+  document.addEventListener('DOMContentLoaded', function() {
+  contentSection.classList.add('dark-theme-gradient');
+  heroSection.classList.add('dark-theme-gradient'); // Добавить класс для темной темы
+  footer.classList.add('dark-theme-gradient'); // Добавить класс для светлой темы
+  switcher.checked = false; // Включить чекбокс для темной темы
+  switcher2.checked = false; // Выключить чекбокс для светлой темы
+});
+} else {
+  body.classList.add('light-theme');
+  heroSection.style.backgroundImage = "url('/images/day.png')";
+  navbar.style.backgroundColor = '#999';
+  contentSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
+  heroSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
+  footer.classList.add('light-theme-gradient');
+  switcher.checked = true; // Выключить чекбокс для светлой темы
+  switcher2.checked = true; // Выключить чекбокс для светлой темы
+}
+function toggleTheme(isLightTheme) {
+  const body = document.querySelector('body');
+  const timeline = document.querySelector('.timeline');
+  const heroSection = document.querySelector('.hero-section');
+  const navbar = document.querySelector('.navbar');
+  const contentSection = document.querySelector('.content-section');
+  const footer = document.querySelector('footer');
+
+  if (isLightTheme) {
+    // Светлая тема
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+    timeline.classList.remove('dark-theme-gradient');
+    timeline.classList.add('light-theme-gradient');
+    heroSection.style.backgroundImage = "url('/images/day.png')";
+    navbar.style.backgroundColor = '#999';
+
+    // Обновление элементов с классом .faq-item
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+      faqItems.forEach(faqItem => {
+        faqItem.classList.add('light-theme-gradient');
+        faqItem.classList.remove('dark-theme-gradient');
+      });
+    } else {
+      console.error("Элементы с классом .faq-item не найдены");
+    }
+    contentSection.classList.remove('dark-theme-gradient');
+    contentSection.classList.add('light-theme-gradient');
+    heroSection.classList.remove('dark-theme-gradient');
+    heroSection.classList.add('light-theme-gradient');
+    footer.classList.remove('dark-theme-gradient');
+    footer.classList.add('light-theme-gradient');
+    localStorage.setItem('theme', 'light');
+  } else {
+    // Темная тема
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+    timeline.classList.add('dark-theme-gradient');
+    timeline.classList.remove('light-theme-gradient');
+    heroSection.style.backgroundImage = "url('/images/night.png')";
+    navbar.style.backgroundColor = '#333';
+
+    // Обновление элементов с классом .faq-item
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+      faqItems.forEach(faqItem => {
+        faqItem.classList.add('dark-theme-gradient');
+        faqItem.classList.remove('light-theme-gradient');
+      });
+    } else {
+      console.error("Элементы с классом .faq-item не найдены");
+    }
+    contentSection.classList.add('dark-theme-gradient');
+    contentSection.classList.remove('light-theme-gradient');
+    heroSection.classList.remove('light-theme-gradient');
+    heroSection.classList.add('dark-theme-gradient');
+    footer.classList.add('dark-theme-gradient');
+    footer.classList.remove('light-theme-gradient');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Пример использования
+switcher.addEventListener('change', function() {
+  toggleTheme(this.checked); // true для светлой темы, false для темной
+});
+
+// Пример использования
+switcher2.addEventListener('change', function() {
+  toggleTheme(this.checked); // true для светлой темы, false для темной
+});
+
+
+// Добавляем обработчик события на клик по glitch-text
+glitchText.addEventListener('click', function() {
+  secret.style.display = 'flex';
+  randomizeGlitch();
+  randomizeGlitch();
+});
+// Добавляем обработчик события на клик по glitch-text
+glitchText2.addEventListener('click', function() {
+  secret.style.display = 'flex';
+  randomizeGlitch();
+  randomizeGlitch();
+});
+
+function randomizeGlitch() {
+  // Рандомные интервалы для изменения
+  const interval = Math.floor(Math.random() * (500 - 200 + 1)) + 200; // между 200 и 500 миллисекундами
+  const randomChance = Math.random();
+
+  // Изменяем текст
+  const textElements = document.querySelectorAll('h1, p,div,i,a,h2,h3,section');
+  textElements.forEach(element => {
+      if (element) { // Проверка, существует ли элемент
+          const glitchClass = chooseRandomGlitchClass(); // Выбираем случайный глитч-класс
+          element.classList.toggle(glitchClass);
+      }
+  });
+
+  // Изменяем изображения
+  const images = document.querySelectorAll('.image');
+  images.forEach(image => {
+      if (image) { // Проверка, существует ли элемент
+          const glitchClass = chooseRandomGlitchClass();
+          image.classList.toggle(glitchClass);
+      }
+  });
+
+  // Скрытие или появление элементов
+  const hideShowChance = Math.random();
+  if (hideShowChance > 0.8) {
+      const randomElement = Math.random() > 0.5 ? textElements[Math.floor(Math.random() * textElements.length)] : images[Math.floor(Math.random() * images.length)];
+      if (randomElement) { // Проверка, существует ли элемент
+          // Если элемент скрыт, то показываем его
+          if (randomElement.classList.contains('hidden')) {
+              randomElement.classList.remove('hidden');
+          } else {
+              randomElement.classList.add('hidden');
+          }
+      }
+  }
+
+  // Изменение фона
+  if (randomChance > 0.5) {
+      document.body.classList.toggle('glitched-background');
+  }
+
+  // Рекурсивный вызов через рандомное время
+  setTimeout(randomizeGlitch, interval);
+}
+
+// Функция для выбора случайного глитч-класса
+function chooseRandomGlitchClass() {
+  const glitchClasses = ['glitched', 'glitched2', 'glitched3'];
+  const randomIndex = Math.floor(Math.random() * glitchClasses.length);
+  return glitchClasses[randomIndex];
+}
+
+// Функция для создания случайных элементов
+function createRandomElement() {
+  const randomType = Math.random();
+
+  const newElement = document.createElement('div');
+  newElement.classList.add('random-element');
+
+  if (randomType > 0.5) {
+      // Создаем случайный текст
+      newElement.textContent = 'Новый элемент появился!';
+      newElement.classList.add('glitched-text-size', 'glitched-font');
+      newElement.style.color = getRandomColor();
+  } else {
+      // Создаем случайное изображение
+      const newImage = document.createElement('img');
+      newImage.src = 'your-image.jpg'; // Замените на URL вашего изображения
+      newImage.classList.add('glitched-image');
+      newElement.appendChild(newImage);
+  }
+
+  // Добавляем новый элемент на страницу
+  document.body.appendChild(newElement);
+
+  // Удаляем элемент через 3 секунды (можно изменить время)
+  setTimeout(() => {
+      newElement.remove();
+  }, 3000);
+}
+
+// Функция для генерации случайного цвета
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Получаем все элементы с классом .faq-item
+const faqItems = document.querySelectorAll('.faq-item');
+
+// Добавляем обработчик события для каждого элемента
+faqItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Проверяем, открыт ли текущий вопрос
+    const isOpen = item.classList.contains('open');
     
-        <h1>Игроки</h1>
-        
-        <div class="wrapper">
-          <div class="item">
-            <img src="https://cdn.discordapp.com/attachments/1334444547043885116/1348175627999510560/image.png?ex=67ce81e5&is=67cd3065&hm=ffc0f3b4957a5235c8ea8c3affaf4c4a6e9f012ba2f613c8fad7c22740ffdb7a&" />
-            <span class="information">
-              <strong>Роджер</strong>
-              <a>Я убил мистера белого, если бы не я, то он не был ни кем.</a>
-              
+    // Закрываем все вопросы
+    faqItems.forEach(i => i.classList.remove('open'));
 
-              <a href="https://t.me/shellchain" target="_blank" class="item_social1"><i class="fa-brands fa-youtube" ></i></a>
-              <a href="https://t.me/shellchain" target="_blank" class="item_social2"><i class="fa-brands fa-twitch" ></i></a>
-              <a href="https://t.me/shellchain" target="_blank" class="item_social3"><i class="fa-brands fa-telegram" ></i></a>
-            </span>
-          </div>
-        </div>
-        
-        <div class="wrapper">
-          <div class="item">
-            <img src="http://pic4.qiyipic.com/image/20140417/b5/01/81/a_100003950_m_601_m2_180_101.jpg" />
-            <span class="information">
-              <strong>改过迁善</strong> 该剧讲述了金明民饰演的律师在失忆后回顾自己以往的所作所为心生忏悔，为弥补自己犯下的错误而与自己曾经工作过的律师事务所对簿公堂的故事。
-            </span>
-          </div>
-        </div>
-        
-        <div class="wrapper">
-          <div class="item">
-            <img src="http://pic1.qiyipic.com/common/lego/20140521/4515581d06cc4d5b8ab320da2cf3778d.jpg" />
-            <span class="information">
-              <strong>父子刑警</strong> 本剧改编自雫井修介小说《Bitter Blood》。剧中，新晋刑警·佐原夏辉（佐藤健饰）被分配到银座警察
-            </span>
-          </div>
-        </div>
-        
-        <div class="wrapper">
-          <div class="item">
-            <img src="http://pic5.qiyipic.com/image/20140319/7a/8d/4f/a_100003478_m_601_m1_180_101.jpg" />
-            <span class="information">
-              <strong>果宝特攻3</strong> 果宝特攻3,顾名思义是果宝特攻的第二部续集,已在国家广播电影电视总局备案.暂定剧情为:菠萝吹雪偶然间穿越到了古代的水果世界
-            </span>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="item">
-            <img src="http://pic0.qiyipic.com/image/20140517/ce/e8/42/v_106167752_m_601_180_101.jpg" />
-            <span class="information">
-              <strong>红眼</strong>1988年7月16日，从汉城始发的列车发生了一起严重的交通事故，造成100多人死亡。
-            </span>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="item">
-            <img src="http://pic6.qiyipic.com/image/20140303/da/e9/aa/v_105073913_m_601_180_101.jpg" />
-            <span class="information">
-              <strong>熊出没之夺宝熊兵</strong>一场漆黑雨夜的意外事故，一段笑料十足的误打误撞，将两个外表相似却内容各异的箱子调换。
-            </span>
-          </div>
-        </div>
-        
-      </div> 
+    // Если текущий вопрос не открыт, открываем его
+    if (!isOpen) {
+      item.classList.add('open');
+    }
+  });
+});
 
-    </section>
-    <script src="/script/scriptlan.js"></script>
+
+
+  // Получаем элементы
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  // Обработчик клика по гамбургеру
+  hamburger.addEventListener('click', () => {
+    // Переключаем класс toggle для анимации
+    hamburger.classList.toggle('toggle');
+    // Переключаем класс active для показа меню
+    menu.classList.toggle('active');
+  });
+
+
+  // Получаем все элементы с классом .tl-item
+document.querySelectorAll('.tl-item').forEach(item => {
+  item.addEventListener('click', function() {
+    // Проверяем, если ширина экрана меньше 768px (мобильное устройство)
+    if (window.innerWidth <= 768) {
+      const title = item.querySelector('.tl-content h1').textContent; // Получаем заголовок
+      const text = item.querySelector('.tl-content p').textContent; // Получаем текст
+      const date = item.getAttribute('data-time'); // Получаем дату из data-time
+
+      // Вставляем полученные данные в меню
+      document.getElementById('mobile-title').textContent = title;
+      document.getElementById('mobile-text').textContent = text;
+      document.getElementById('mobile-date').textContent = date; // Отображаем дату
+
+      // Показываем меню
+      document.getElementById('mobile-menu').classList.add('show');
+    }
+  });
+});
+
+// Закрытие меню (по клику на сам контейнер)
+document.getElementById('mobile-menu').addEventListener('click', function(e) {
+  if (e.target !== this) return;
+  this.classList.remove('show');
+});
+    </script>
     <script src="/script/scriptmain.js"></script>
 </body>
 </html>

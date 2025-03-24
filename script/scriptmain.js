@@ -301,3 +301,54 @@ document.getElementById('mobile-menu').addEventListener('click', function(e) {
   if (e.target !== this) return;
   this.classList.remove('show');
 });
+
+// Проверка, было ли уже согласие в localStorage
+function checkConsent() {
+  return localStorage.getItem("coыokies_accepted") === "true";
+}
+
+// Если пользователь не дал согласие, показываем баннер
+if (!checkConsent()) {
+  document.getElementById("consent-banner").style.display = "block";
+}
+
+// Элементы
+const consentBanner = document.getElementById('consent-banner');
+const settingsPanel = document.getElementById('settings-panel');
+const acceptButton = document.getElementById('accept-all');
+const customizeButton = document.getElementById('customize-settings');
+const backButton = document.getElementById('back');
+const disableCookiesButton = document.getElementById('disable-cookies');
+
+// Обработчик кнопки "Согласиться"
+acceptButton.addEventListener('click', function() {
+  // Сохраняем согласие в localStorage
+  localStorage.setItem("cookies_accepted", "true");
+  consentBanner.style.display = 'none';
+  alert('Вы согласились с использованием cookies!');
+});
+
+// Обработчик кнопки "Настроить"
+customizeButton.addEventListener('click', function() {
+  // Скрыть баннер с запросом согласия и показать панель настроек
+  consentBanner.style.display = 'none';
+  settingsPanel.style.display = 'block';
+});
+
+// Обработчик кнопки "Назад" на панели настроек
+backButton.addEventListener('click', function() {
+  settingsPanel.style.display = 'none';
+  consentBanner.style.display = 'block';
+});
+
+// Обработчик кнопки "Отключить cookies"
+disableCookiesButton.addEventListener('click', function() {
+  // Показываем предупреждение, что сайт не будет работать без cookies
+  const userConfirmed = confirm('Предупреждение: сайт не будет работать без cookies. Вы уверены, что хотите продолжить?');
+  if (userConfirmed) {
+    window.location.href = 'https://youtube.com/shorts/sU5R9WarEH4'; // Покидаем сайт
+  } else {
+    settingsPanel.style.display = 'none';
+    consentBanner.style.display = 'block';
+  }
+});

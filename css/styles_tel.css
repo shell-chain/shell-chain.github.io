@@ -7,9 +7,7 @@ body {
   padding: 0;
 }
 
-.tl-content p {
-    font-size: 0.4em;
-}
+
 /* Прокаченный стиль для футера */
 footer {
   margin-top: 60px;
@@ -337,6 +335,9 @@ li.fade{
   top: 0;
   display: none;
   right: 0;
+}
+.tl-content p{
+  font-size: 0.4em;
 }
 
 
