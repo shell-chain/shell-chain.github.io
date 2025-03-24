@@ -304,7 +304,7 @@ document.getElementById('mobile-menu').addEventListener('click', function(e) {
 
 // Проверка, было ли уже согласие в localStorage
 function checkConsent() {
-  return localStorage.getItem("coыokies_accepted") === "true";
+  return localStorage.getItem("cookies_accepted") === "true";
 }
 
 // Если пользователь не дал согласие, показываем баннер
