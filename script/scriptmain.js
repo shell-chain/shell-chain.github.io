@@ -325,7 +325,6 @@ acceptButton.addEventListener('click', function() {
   // Сохраняем согласие в localStorage
   localStorage.setItem("cookies_accepted", "true");
   consentBanner.style.display = 'none';
-  alert('Вы согласились с использованием cookies!');
 });
 
 // Обработчик кнопки "Настроить"
