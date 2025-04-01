@@ -1,108 +1,119 @@
-body {
-    text-align: center;
-    background-size: cover;
-  }          
-  #container {
-      margin: 0 auto;
-      width: 1024px;
-  }
-  .wrapper {
-    display: inline-block;
-      width: 310px;
-     height: 100px;
-      vertical-align: top;
-      margin: 1em 1.5em 2em 0;
-      cursor: pointer;
-      position: relative;
-      perspective: 4000px;
-  }
-    
-  .item {
-    height: 100px;
-      transform-style: preserve-3d;
-      transition: transform .6s;
-  }
-    
-  .item:hover {
-    -webkit-transform: translateZ(-50px) rotateX(95deg);
-    -moz-transform: translateZ(-50px) rotateX(95deg);
-    -ms-transform: translateZ(-50px) rotateX(95deg);
-    -o-transform: translateZ(-50px) rotateX(95deg);
-    transform: translateZ(-50px) rotateX(95deg);
-  }
-     
-  .item img {
-     display: block;
-     position: absolute;
-     top: 0;
-     border-radius: 3px;
-     box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
-     transform: translateZ(50px);
-     transition: all .6s;
-     width: 310px;
-     object-fit: cover; /* Обрезает лишние края и сохраняет соотношение сторон */
-     height: 100px;
-   }
-      
-   .item .information {
-    display: block;
-    position: absolute;
-    top: 0;
-    height: 80px;
-    width: 290px;
-    text-align: left;
-    border-radius: 15px;
-    padding: 10px;
-    font-size: 12px;
-    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
-    box-shadow: none;
-    background: linear-gradient(to bottom,  #2b2b2b 0%,#2b2b2b 100%);
-  
-      -webkit-transform: rotateX(-90deg) translateZ(50px);
-      -moz-transform: rotateX(-90deg) translateZ(50px);
-      -ms-transform: rotateX(-90deg) translateZ(50px);
-      -o-transform: rotateX(-90deg) translateZ(50px);
-      transform: rotateX(-90deg) translateZ(50px);
-      -webkit-transition: all .6s;
-      -moz-transition: all .6s;
-      -ms-transition: all .6s;
-      -o-transition: all .6s;
-      transition: all .6s;
-   }
-      
-   .information strong {
-     display: block;
-     margin: .2em 0 .5em 0;
-     font-size: 20px;
-    }
-  .item:hover img {
-    box-shadow: none;
-    border-radius: 15px;
-  }
-        
-  .item:hover .information {
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
-    border-radius: 3px;
-   }
-   .item_social1 {
-    position: fixed;
-    font-size: 2.5vb;
-    right: 2%; /* отступ от правого края */
-    bottom: 3%; /* отступ от нижнего края */
-  }
-  .item_social2 {
-    position: fixed;
-    font-size: 2.5vb;
-    right: 3%; /* отступ от правого края */
-    bottom: 33%; /* отступ от нижнего края */
-  }
-  
-  .item_social3 {
-    position: fixed;
-    font-size: 2.5vb;
-    right: 3%; /* отступ от правого края */
-    bottom: 66%; /* отступ от нижнего края */
-  }
-  
-   
-   
+/* Общие стили для заголовков секций */
+.section-title {
+  text-align: center;
+  color: inherit; /* Наследует цвет темы */
+  margin: 40px 0 20px;
+  font-size: 2.5rem;
+}
+
+/* Контейнер для карточек */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+/* Общие стили карточек (игроки + админы) */
+.player-card, .admin-card {
+  background: var(--card-bg, #2c2c2c);
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Адаптация под светлую тему */
+body.light-theme .player-card,
+body.light-theme .admin-card {
+  --card-bg: #e7e7e7;
+  color: #333;
+}
+
+/* Аватарки */
+.player-avatar, .admin-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--avatar-border, #4a4a6a);
+  margin-bottom: 15px;
+}
+
+body.light-theme .player-avatar,
+body.light-theme .admin-avatar {
+  --avatar-border: #b8b8d2;
+}
+
+/* Никнейм */
+.player-card h3, .admin-card h3 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+  color: inherit;
+}
+
+/* Описание */
+.player-card p, .admin-card p {
+  color: var(--text-secondary, #bbb);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+body.light-theme .player-card p,
+body.light-theme .admin-card p {
+  --text-secondary: #666;
+}
+
+/* Соц-кнопки */
+.social-linkss {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-linkss a {
+  font-size: 3vb;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-linkss a:hover {
+  transform: scale(1.1);
+}
+
+/* Цвета кнопок */
+.telegram { color: rgb(0, 140, 255); }
+.youtube { color: rgb(255, 0, 0); }
+.twitch { color: #9146ff; }
+.older { color:rgb(112, 132, 158); }
+/* Статус админа */
+.admin-status {
+  display: inline-block;
+  background: var(--status-bg, #4a4a6a);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+body.light-theme .admin-status {
+  --status-bg: #8f8f8f;
+}
+
+/* Анимация при наведении */
+.player-card:hover, .admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+

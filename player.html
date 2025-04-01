@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShellChain - Главная</title>
-    <script src="https://kit.fontawesome.com/06763759a1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/06763759a1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/stylesbutton.css">
-    <link rel="stylesheet" href="/css/styles_tel.css">
     <link rel="stylesheet" href="/css/styles_player.css">
+    <link rel="stylesheet" href="/css/styles_tel.css">
     <link rel="icon" type="image/png" href="/logo/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg" />
     <link rel="shortcut icon" href="/logo/favicon.ico" />
@@ -20,7 +20,7 @@
     <meta name="apple-mobile-web-app-title" content="ShellChain" />
     <link rel="manifest" href="/logo/site.webmanifest" />
 </head>
-<body>
+<body class="hidden">
     <header>
         <nav class="navbar">
             <div class="social-link">
@@ -32,6 +32,7 @@
             <a href="index.html" ><i class="fas fa-home"></i><span>Главная</span></a>
             <a href="player.html" class="active"><i class="fas fa-address-book"></i><span>Игроки</span></a>
             <a href="info.html"><i class="fas fa-info-circle"></i><span>О сервере</span></a>
+            <a href="secret.html" class="secret" style="display: none;"><i class="fa-solid fa-question" aria-hidden="true" style="display: none;"></i>Get OUT!</a>
           </div>
           
           <!-- Гамбургер меню -->
@@ -107,7 +108,68 @@
     </div>
     <div class="delay" ></div>
     <section class="content-section">
-  </section>
+      <h1 class="section-title">Игроки</h1>
+      <div class="cards-container">
+          <div class="player-card"style="border: 3px solid var(--avatar-border, #ffffff);">
+            <img src="/avatars/You.png" alt="Ник админа" class="admin-avatar" style="border: 3px solid var(--avatar-border, #ffffff);">
+            <h3>Ты</h3>
+            <p>Сервер только начинает набирать игроков, и ты можешь стать одним из них! Просто подай <a target="_blank" href="https://forms.gle/5aMuzsDUfx4pCBdD9">заявку!</a></p>
+            <div class="social-linkss">
+              <a href="https://forms.gle/5aMuzsDUfx4pCBdD9" target="_blank" class="older"><i class="fa-solid fa-user-plus"></i></a>
+              
+            </div>
+          </div>
+        </div>
+
+        
+      <h1 class="section-title">Администрация</h1>
+      <div class="cards-container">
+        <!-- Карточка админа -->
+        <div class="admin-card" style="border: 3px solid var(--avatar-border, #641515);">
+          <img src="/avatars/sir_rodger.png" alt="Ник админа" class="admin-avatar" style="border: 3px solid var(--avatar-border, #641515);">
+          <h3>Sir_Rodger</h3>
+          <span class="admin-status">Основатель</span>
+          <p>Создатель сервера. Разрабатывает сюжет, но в большей части игрок чем администратор.</p>
+          <div class="social-linkss">
+            <a href="https://www.twitch.tv/sir_rodger_" target="_blank" class="twitch"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.youtube.com/channel/UCcd1BKMtt1HZKfcEbXBultQ" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Карточка админа -->
+        <div class="admin-card" style="border: 3px solid var(--avatar-border, #ffffff);">
+          <img src="/avatars/ArisNow0.png" alt="Ник админа" class="admin-avatar" style="border: 3px solid var(--avatar-border, #ffffff);">
+          <h3>ArisNow0</h3>
+          <span class="admin-status">Тех. Админ, Второй Основатель</span>
+          <p>Разрабатывает сюжет, создал этот сайт и вообще занимается почти всей технической частью (ну, он же тех. админ).</p>
+          <div class="social-linkss">
+            <a href="https://t.me/Giper_Samouchka" target="_blank" class="telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.twitch.tv/arisnow0" target="_blank" class="twitch"><i class="fab fa-twitch"></i></a>
+            <a href="https://arisnow0.github.io" target="_blank" class="older"><i class="fa-solid fa-globe"></i></a>
+            
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <h1 id="mobile-title"></h1>
+    <p id="mobile-text"></p>
+    <p id="mobile-date" class="mobile-date"></p>
+  </div>
+  <!-- Основной баннер с запросом согласия -->
+<div id="consent-banner">
+  <p>Мы используем файлы cookie для персонализации контента и рекламы. Вы можете согласиться с этим или настроить свои предпочтения.</p>
+  <button id="accept-all">Согласиться</button>
+  <button id="customize-settings">Настроить</button>
+</div>
+
+<!-- Панель настроек cookies -->
+<div id="settings-panel">
+  <p>Вы хотите отключить файлы cookie? Это может повлиять на функциональность сайта.</p>
+  <button id="back">Назад</button>
+  <button id="disable-cookies">Отключить cookies</button>
+</div>
   
   <footer class="footer">
     <div class="container">
@@ -122,13 +184,14 @@
         <p>распространяемого под лицензией <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
         <p></a></p>
         <p>ShellChain &copy; 2025 Все права защищены.</p>
-        <p class="creator" ><a target="_blank" href="https://cat-bios.github.io">Сайт создан был создан ArisNow0</a></p>
     </div>
 </footer>
 
 
+    <script src="/script/scriptlan.js"></script>
+    <script src="/script/scriptmain.js"></script>
     <script>
-// Проверка текущей темы и установка начального состояния
+      // Проверка текущей темы и установка начального состояния
 const switcher = document.getElementById('checkbox');
 const switcher2 = document.getElementById('checkbox2');
 const body = document.body;
@@ -136,35 +199,29 @@ const heroSection = document.querySelector('.hero-section');
 const navbar = document.querySelector('.navbar');
 const contentSection = document.querySelector('.content-section');
 const footer = document.querySelector('.footer');
-
-
-// Находим элементы на странице
-const glitchText = document.getElementById('glitch-text');
-const glitchText2 = document.getElementById('glitch-tex');
-const secret = document.querySelector('.secret');
 // Проверка сохраненной темы из localStorage или установка по умолчанию
 const currentTheme = localStorage.getItem('theme') || 'dark';
 if (currentTheme === 'dark') {
   body.classList.add('dark-theme');
   heroSection.style.backgroundImage = "url('/images/night.png')";
   navbar.style.backgroundColor = '#333';
-  document.addEventListener('DOMContentLoaded', function() {
   contentSection.classList.add('dark-theme-gradient');
   heroSection.classList.add('dark-theme-gradient'); // Добавить класс для темной темы
   footer.classList.add('dark-theme-gradient'); // Добавить класс для светлой темы
   switcher.checked = false; // Включить чекбокс для темной темы
   switcher2.checked = false; // Выключить чекбокс для светлой темы
-});
 } else {
   body.classList.add('light-theme');
   heroSection.style.backgroundImage = "url('/images/day.png')";
   navbar.style.backgroundColor = '#999';
+
   contentSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
   heroSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
   footer.classList.add('light-theme-gradient');
   switcher.checked = true; // Выключить чекбокс для светлой темы
   switcher2.checked = true; // Выключить чекбокс для светлой темы
 }
+
 function toggleTheme(isLightTheme) {
   const body = document.querySelector('body');
   const timeline = document.querySelector('.timeline');
@@ -177,21 +234,8 @@ function toggleTheme(isLightTheme) {
     // Светлая тема
     body.classList.remove('dark-theme');
     body.classList.add('light-theme');
-    timeline.classList.remove('dark-theme-gradient');
-    timeline.classList.add('light-theme-gradient');
     heroSection.style.backgroundImage = "url('/images/day.png')";
     navbar.style.backgroundColor = '#999';
-
-    // Обновление элементов с классом .faq-item
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length > 0) {
-      faqItems.forEach(faqItem => {
-        faqItem.classList.add('light-theme-gradient');
-        faqItem.classList.remove('dark-theme-gradient');
-      });
-    } else {
-      console.error("Элементы с классом .faq-item не найдены");
-    }
     contentSection.classList.remove('dark-theme-gradient');
     contentSection.classList.add('light-theme-gradient');
     heroSection.classList.remove('dark-theme-gradient');
@@ -203,21 +247,8 @@ function toggleTheme(isLightTheme) {
     // Темная тема
     body.classList.remove('light-theme');
     body.classList.add('dark-theme');
-    timeline.classList.add('dark-theme-gradient');
-    timeline.classList.remove('light-theme-gradient');
     heroSection.style.backgroundImage = "url('/images/night.png')";
     navbar.style.backgroundColor = '#333';
-
-    // Обновление элементов с классом .faq-item
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length > 0) {
-      faqItems.forEach(faqItem => {
-        faqItem.classList.add('dark-theme-gradient');
-        faqItem.classList.remove('light-theme-gradient');
-      });
-    } else {
-      console.error("Элементы с классом .faq-item не найдены");
-    }
     contentSection.classList.add('dark-theme-gradient');
     contentSection.classList.remove('light-theme-gradient');
     heroSection.classList.remove('light-theme-gradient');
@@ -237,173 +268,11 @@ switcher.addEventListener('change', function() {
 switcher2.addEventListener('change', function() {
   toggleTheme(this.checked); // true для светлой темы, false для темной
 });
-
-
-// Добавляем обработчик события на клик по glitch-text
-glitchText.addEventListener('click', function() {
-  secret.style.display = 'flex';
-  randomizeGlitch();
-  randomizeGlitch();
-});
-// Добавляем обработчик события на клик по glitch-text
-glitchText2.addEventListener('click', function() {
-  secret.style.display = 'flex';
-  randomizeGlitch();
-  randomizeGlitch();
-});
-
-function randomizeGlitch() {
-  // Рандомные интервалы для изменения
-  const interval = Math.floor(Math.random() * (500 - 200 + 1)) + 200; // между 200 и 500 миллисекундами
-  const randomChance = Math.random();
-
-  // Изменяем текст
-  const textElements = document.querySelectorAll('h1, p,div,i,a,h2,h3,section');
-  textElements.forEach(element => {
-      if (element) { // Проверка, существует ли элемент
-          const glitchClass = chooseRandomGlitchClass(); // Выбираем случайный глитч-класс
-          element.classList.toggle(glitchClass);
-      }
-  });
-
-  // Изменяем изображения
-  const images = document.querySelectorAll('.image');
-  images.forEach(image => {
-      if (image) { // Проверка, существует ли элемент
-          const glitchClass = chooseRandomGlitchClass();
-          image.classList.toggle(glitchClass);
-      }
-  });
-
-  // Скрытие или появление элементов
-  const hideShowChance = Math.random();
-  if (hideShowChance > 0.8) {
-      const randomElement = Math.random() > 0.5 ? textElements[Math.floor(Math.random() * textElements.length)] : images[Math.floor(Math.random() * images.length)];
-      if (randomElement) { // Проверка, существует ли элемент
-          // Если элемент скрыт, то показываем его
-          if (randomElement.classList.contains('hidden')) {
-              randomElement.classList.remove('hidden');
-          } else {
-              randomElement.classList.add('hidden');
-          }
-      }
-  }
-
-  // Изменение фона
-  if (randomChance > 0.5) {
-      document.body.classList.toggle('glitched-background');
-  }
-
-  // Рекурсивный вызов через рандомное время
-  setTimeout(randomizeGlitch, interval);
-}
-
-// Функция для выбора случайного глитч-класса
-function chooseRandomGlitchClass() {
-  const glitchClasses = ['glitched', 'glitched2', 'glitched3'];
-  const randomIndex = Math.floor(Math.random() * glitchClasses.length);
-  return glitchClasses[randomIndex];
-}
-
-// Функция для создания случайных элементов
-function createRandomElement() {
-  const randomType = Math.random();
-
-  const newElement = document.createElement('div');
-  newElement.classList.add('random-element');
-
-  if (randomType > 0.5) {
-      // Создаем случайный текст
-      newElement.textContent = 'Новый элемент появился!';
-      newElement.classList.add('glitched-text-size', 'glitched-font');
-      newElement.style.color = getRandomColor();
-  } else {
-      // Создаем случайное изображение
-      const newImage = document.createElement('img');
-      newImage.src = 'your-image.jpg'; // Замените на URL вашего изображения
-      newImage.classList.add('glitched-image');
-      newElement.appendChild(newImage);
-  }
-
-  // Добавляем новый элемент на страницу
-  document.body.appendChild(newElement);
-
-  // Удаляем элемент через 3 секунды (можно изменить время)
-  setTimeout(() => {
-      newElement.remove();
-  }, 3000);
-}
-
-// Функция для генерации случайного цвета
-function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-// Получаем все элементы с классом .faq-item
-const faqItems = document.querySelectorAll('.faq-item');
-
-// Добавляем обработчик события для каждого элемента
-faqItems.forEach(item => {
-  item.addEventListener('click', () => {
-    // Проверяем, открыт ли текущий вопрос
-    const isOpen = item.classList.contains('open');
-    
-    // Закрываем все вопросы
-    faqItems.forEach(i => i.classList.remove('open'));
-
-    // Если текущий вопрос не открыт, открываем его
-    if (!isOpen) {
-      item.classList.add('open');
-    }
-  });
-});
-
-
-
-  // Получаем элементы
-  const hamburger = document.getElementById('hamburger');
-  const menu = document.getElementById('menu');
-
-  // Обработчик клика по гамбургеру
-  hamburger.addEventListener('click', () => {
-    // Переключаем класс toggle для анимации
-    hamburger.classList.toggle('toggle');
-    // Переключаем класс active для показа меню
-    menu.classList.toggle('active');
-  });
-
-
-  // Получаем все элементы с классом .tl-item
-document.querySelectorAll('.tl-item').forEach(item => {
-  item.addEventListener('click', function() {
-    // Проверяем, если ширина экрана меньше 768px (мобильное устройство)
-    if (window.innerWidth <= 768) {
-      const title = item.querySelector('.tl-content h1').textContent; // Получаем заголовок
-      const text = item.querySelector('.tl-content p').textContent; // Получаем текст
-      const date = item.getAttribute('data-time'); // Получаем дату из data-time
-
-      // Вставляем полученные данные в меню
-      document.getElementById('mobile-title').textContent = title;
-      document.getElementById('mobile-text').textContent = text;
-      document.getElementById('mobile-date').textContent = date; // Отображаем дату
-
-      // Показываем меню
-      document.getElementById('mobile-menu').classList.add('show');
-    }
-  });
-});
-
-// Закрытие меню (по клику на сам контейнер)
-document.getElementById('mobile-menu').addEventListener('click', function(e) {
-  if (e.target !== this) return;
-  this.classList.remove('show');
-});
+window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        body.classList.replace('hidden', 'visible');
+      }, 1);
+    });
     </script>
-    <script src="/script/scriptmain.js"></script>
 </body>
 </html>

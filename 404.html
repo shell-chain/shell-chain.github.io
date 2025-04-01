@@ -7,10 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ShellChain - 404</title>
+    <title>ShellChain - Главная</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/06763759a1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/stylesbutton.css">
+    <link rel="stylesheet" href="/css/styles_player.css">
+    <link rel="stylesheet" href="/css/styles_tel.css">
     <link rel="icon" type="image/png" href="/logo/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg" />
     <link rel="shortcut icon" href="/logo/favicon.ico" />
@@ -18,7 +20,7 @@
     <meta name="apple-mobile-web-app-title" content="ShellChain" />
     <link rel="manifest" href="/logo/site.webmanifest" />
 </head>
-<body>
+<body class="hidden">
     <header>
         <nav class="navbar">
             <div class="social-link">
@@ -27,13 +29,19 @@
                 <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
             </div>
           <div class="links">
-            <a href="index.html"><i class="fas fa-home"></i>Главная</a>
-            <a href="player.html" ><i class="fas fa-address-book"></i>Игроки</a>
-            <a href="info.html"><i class="fas fa-info-circle"></i>О сервере</a>
-            <a href="404.html" class="active"><i class="fa-solid fa-circle-exclamation"></i>Get Out!</a>
+            <a href="index.html" ><i class="fas fa-home"></i><span>Главная</span></a>
+            <a href="player.html"><i class="fas fa-address-book"></i><span>Игроки</span></a>
+            <a href="info.html"><i class="fas fa-info-circle"></i><span>О сервере</span></a>
+            <a href="404.html" class="active"><i class="fa-solid fa-circle-exclamation"></i><span>Error 404</span></a>
           </div>
-
-          <div class="social-link">
+          
+          <!-- Гамбургер меню -->
+          <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <div class="social-link2">
             <input type="checkbox" id="checkbox" style="display:none;" />
             <label for="checkbox" class="toggle1">
               <span>
@@ -46,32 +54,183 @@
                   <img src="" alt="Current Language" />
                 </div>
                 <div class="flags">
-                  <div class="flag" data-lang="en">
+                  <div class="flagd" data-lang="en">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="English" />
                   </div>
-                  <div class="flag" data-lang="ru">
+                  <div class="flagd" data-lang="ru">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Russian" />
                   </div>
-                  <div class="flag" data-lang="ua">
+                  <div class="flagd" data-lang="ua">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukraine" />
                   </div>
                 </div>
               </div>
           </div>
+          <div class="menu" id="menu">
+          <div class="social-link3">
+            <div class="checkboxs" style="margin-left: -12%;">
+            <input type="checkbox" id="checkbox2" style="display:none;" />
+            <label for="checkbox2" class="toggle1">
+              <span>
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-lightbulb"></i>
+              </span>
+            </label>
+          </div>
+            <div class="lang-switcher" id="lang-switcher2">
+                <div class="flag" id="current-flag2">
+                  <img src="" alt="Current Language" />
+                </div>
+                <div class="flags">
+                  <div class="flagd" data-lang="en">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="English" />
+                  </div>
+                  <div class="flagd" data-lang="ru">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Russian" />
+                  </div>
+                  <div class="flagd" data-lang="ua">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukraine" />
+                  </div>
+                </div>
+              </div>
+              <div class="social-link4">
+                <a href="https://discord.gg/EPgTFRf7Zn" target="_blank"  class="social"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.youtube.com/@ShellChain" target="_blank"  class="social"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
 
         </nav>
       </header>
-      
     <div class="hero-section" >
         <img src="/images/Error 404_logo.png" class="layer-logo">
     </div>
-    <div class="delay" >
-    
-    </div>
+    <div class="delay" ></div>
     <section class="content-section">
-
     </section>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <h1 id="mobile-title"></h1>
+    <p id="mobile-text"></p>
+    <p id="mobile-date" class="mobile-date"></p>
+  </div>
+  <!-- Основной баннер с запросом согласия -->
+<div id="consent-banner">
+  <p>Мы используем файлы cookie для персонализации контента и рекламы. Вы можете согласиться с этим или настроить свои предпочтения.</p>
+  <button id="accept-all">Согласиться</button>
+  <button id="customize-settings">Настроить</button>
+</div>
+
+<!-- Панель настроек cookies -->
+<div id="settings-panel">
+  <p>Вы хотите отключить файлы cookie? Это может повлиять на функциональность сайта.</p>
+  <button id="back">Назад</button>
+  <button id="disable-cookies">Отключить cookies</button>
+</div>
+  
+  <footer class="footer">
+    <div class="container">
+      <a class="s" style="height: 10px;"></a>
+        <div class="social-link-footer">
+            <a href="https://discord.gg/EPgTFRf7Zn" target="_blank" class="social"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.youtube.com/@ShellChain" target="_blank" class="social"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+
+        <p>Выражаем благодарность <a target="_blank" href="https://fontawesome.com">FontAwesome</a> за предоставление шрифта,</p>
+        <p>распространяемого под лицензией <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+        <p></a></p>
+        <p>ShellChain &copy; 2025 Все права защищены.</p>
+    </div>
+</footer>
+
+
     <script src="/script/script404.js"></script>
     <script src="/script/scriptmain.js"></script>
+    <script>
+      // Проверка текущей темы и установка начального состояния
+const switcher = document.getElementById('checkbox');
+const switcher2 = document.getElementById('checkbox2');
+const body = document.body;
+const heroSection = document.querySelector('.hero-section');
+const navbar = document.querySelector('.navbar');
+const contentSection = document.querySelector('.content-section');
+const footer = document.querySelector('.footer');
+// Проверка сохраненной темы из localStorage или установка по умолчанию
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'dark') {
+  body.classList.add('dark-theme');
+  heroSection.style.backgroundImage = "url('/images/night.png')";
+  navbar.style.backgroundColor = '#333';
+  contentSection.classList.add('dark-theme-gradient');
+  heroSection.classList.add('dark-theme-gradient'); // Добавить класс для темной темы
+  footer.classList.add('dark-theme-gradient'); // Добавить класс для светлой темы
+  switcher.checked = false; // Включить чекбокс для темной темы
+  switcher2.checked = false; // Выключить чекбокс для светлой темы
+} else {
+  body.classList.add('light-theme');
+  heroSection.style.backgroundImage = "url('/images/day.png')";
+  navbar.style.backgroundColor = '#999';
+
+  contentSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
+  heroSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
+  footer.classList.add('light-theme-gradient');
+  switcher.checked = true; // Выключить чекбокс для светлой темы
+  switcher2.checked = true; // Выключить чекбокс для светлой темы
+}
+
+function toggleTheme(isLightTheme) {
+  const body = document.querySelector('body');
+  const timeline = document.querySelector('.timeline');
+  const heroSection = document.querySelector('.hero-section');
+  const navbar = document.querySelector('.navbar');
+  const contentSection = document.querySelector('.content-section');
+  const footer = document.querySelector('footer');
+
+  if (isLightTheme) {
+    // Светлая тема
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+    heroSection.style.backgroundImage = "url('/images/day.png')";
+    navbar.style.backgroundColor = '#999';
+    contentSection.classList.remove('dark-theme-gradient');
+    contentSection.classList.add('light-theme-gradient');
+    heroSection.classList.remove('dark-theme-gradient');
+    heroSection.classList.add('light-theme-gradient');
+    footer.classList.remove('dark-theme-gradient');
+    footer.classList.add('light-theme-gradient');
+    localStorage.setItem('theme', 'light');
+  } else {
+    // Темная тема
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+    heroSection.style.backgroundImage = "url('/images/night.png')";
+    navbar.style.backgroundColor = '#333';
+    contentSection.classList.add('dark-theme-gradient');
+    contentSection.classList.remove('light-theme-gradient');
+    heroSection.classList.remove('light-theme-gradient');
+    heroSection.classList.add('dark-theme-gradient');
+    footer.classList.add('dark-theme-gradient');
+    footer.classList.remove('light-theme-gradient');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Пример использования
+switcher.addEventListener('change', function() {
+  toggleTheme(this.checked); // true для светлой темы, false для темной
+});
+
+// Пример использования
+switcher2.addEventListener('change', function() {
+  toggleTheme(this.checked); // true для светлой темы, false для темной
+});
+window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        body.classList.replace('hidden', 'visible');
+      }, 1);
+    });
+    </script>
 </body>
 </html>

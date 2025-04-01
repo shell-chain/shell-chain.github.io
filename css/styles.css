@@ -338,7 +338,7 @@ footer {
       background-color: #d1d1d163;
       padding: 10px;
       position: absolute;
-      top: 6%;
+      top: 3%;
       right: 1%;
       z-index: 2;
       border-radius: 8px;
@@ -610,3 +610,26 @@ li.fade{
       background-color: #fb8c00;
       border-color: #fb8c00;
     }
+
+/* Исходное состояние (элемент невиден и находится на 50px ниже) */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Только для тех элементов, которые должны анимироваться */
+.visible {
+  animation: fadeInUp 0.8s ease-out forwards; /* Анимация плавного появления */
+}
