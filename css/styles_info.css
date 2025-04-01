@@ -1,0 +1,149 @@
+/* Основные стили секции */
+.server-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+/* Блоки информации */
+.info-block {
+    background: var(--card-bg, #2c2c2c);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.info-block h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Сетка особенностей */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: var(--feature-bg, #383838);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-top: 0;
+}
+
+.feature-card ul {
+    padding-left: 20px;
+}
+
+.feature-card li {
+    margin-bottom: 8px;
+}
+
+/* Блок комьюнити */
+.community-card {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.community-text {
+    flex: 1;
+}
+
+.community-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.community-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+.community-image:hover img {
+    transform: scale(1.05);
+}
+
+.highlight {
+    color: var(--accent-color, #a1b5b5);
+    font-weight: bold;
+}
+
+/* Кнопка присоединения */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #0ff, #00a2ff);
+    color: #111;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Анимации */
+@keyframes neon-pulse {
+    from {
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+    to {
+        text-shadow: 0 0 15px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+    }
+}
+
+/* Адаптация под светлую тему */
+body.light-theme .info-block,
+body.light-theme .feature-card {
+    --card-bg: #e7e7e7;
+    --feature-bg: #f0f0f0;
+    color: #333;
+}
+
+body.light-theme .highlight {
+    color: #60446b;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .community-card {
+        flex-direction: column;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

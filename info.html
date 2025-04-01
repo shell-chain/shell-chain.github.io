@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ShellChain - Главная</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/06763759a1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/stylesbutton.css">
+    <link rel="stylesheet" href="/css/styles_tel.css">
+    <link rel="stylesheet" href="/css/styles_info.css">
+    <link rel="stylesheet" href="/css/styles_player.css">
+    <link rel="icon" type="image/png" href="/logo/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg" />
+    <link rel="shortcut icon" href="/logo/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ShellChain" />
+    <link rel="manifest" href="/logo/site.webmanifest" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="social-link">
+                <a href="https://discord.gg/EPgTFRf7Zn" target="_blank"  class="social"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.youtube.com/@ShellChain" target="_blank"  class="social"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+          <div class="links">
+            <a href="index.html"><i class="fas fa-home"></i><span>Главная</span></a>
+            <a href="player.html"><i class="fas fa-address-book"></i><span>Игроки</span></a>
+            <a href="info.html" class="active"><i class="fas fa-info-circle"></i><span>О сервере</span></a>
+            <a href="secret.html" class="secret" style="display: none;"><i class="fa-solid fa-question" aria-hidden="true" style="display: none;"></i>Get OUT!</a>
+          </div>
+          
+          <!-- Гамбургер меню -->
+          <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <div class="social-link2">
+            <input type="checkbox" id="checkbox" style="display:none;" />
+            <label for="checkbox" class="toggle1">
+              <span>
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-lightbulb"></i>
+              </span>
+            </label>
+            <div class="lang-switcher" id="lang-switcher">
+                <div class="flag" id="current-flag">
+                  <img src="" alt="Current Language" />
+                </div>
+                <div class="flags">
+                  <div class="flagd" data-lang="en">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="English" />
+                  </div>
+                  <div class="flagd" data-lang="ru">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Russian" />
+                  </div>
+                  <div class="flagd" data-lang="ua">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukraine" />
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="menu" id="menu">
+          <div class="social-link3">
+            <div class="checkboxs" style="margin-left: -12%;">
+            <input type="checkbox" id="checkbox2" style="display:none;" />
+            <label for="checkbox2" class="toggle1">
+              <span>
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-lightbulb"></i>
+              </span>
+            </label>
+          </div>
+            <div class="lang-switcher" id="lang-switcher2">
+                <div class="flag" id="current-flag2">
+                  <img src="" alt="Current Language" />
+                </div>
+                <div class="flags">
+                  <div class="flagd" data-lang="en">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="English" />
+                  </div>
+                  <div class="flagd" data-lang="ru">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Russian" />
+                  </div>
+                  <div class="flagd" data-lang="ua">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukraine" />
+                  </div>
+                </div>
+              </div>
+              <div class="social-link4">
+                <a href="https://discord.gg/EPgTFRf7Zn" target="_blank"  class="social"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.youtube.com/@ShellChain" target="_blank"  class="social"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        </nav>
+    </header>
+    <div class="hero-section" >
+        <img src="/images/logo.png" class="layer-logo">
+    </div>
+    <div class="delay" ></div>
+    <section class="content-section">
+        <div class="server-info-container">
+            <h1 class="section-title neon-text">ShellChain – больше, чем просто сервер</h1>
+            
+            <div class="info-block">
+                <h2><i class="fas fa-globe"></i> О сервере</h2>
+                <p>ShellChain – это <span class="highlight">уникальный и атмосферный SMP Minecraft сервер</span>, который объединяет любителей ванильного геймплея с авторскими дополнениями, глубоким сюжетом и продуманным комьюнити.</p>
+            </div>
+
+            <div class="info-block">
+                <h2><i class="fas fa-gem"></i> Особенности</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-water feature-icon"></i>
+                        <h3>Полное погружение</h3>
+                        <ul>
+                            <li>Авторские ресурспаки</li>
+                            <li>Уникальный сюжет</li>
+                            <li>Специальные моды</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-book feature-icon"></i>
+                        <h3>Живой сюжет</h3>
+                        <ul>
+                            <li>Развивающаяся история</li>
+                            <li>Ролевые сценарии</li>
+                            <li>Регулярные ивенты</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-video feature-icon"></i>
+                        <h3>Для контентмейкеров</h3>
+                        <ul>
+                            <li>Идеально для стримов</li>
+                            <li>Уникальные взаимодействия</li>
+                            <li>Поддержка авторов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h2><i class="fas fa-users"></i> Наше комьюнити</h2>
+                <div class="community-card">
+                    <div class="community-text">
+                        <p>Сервер ориентирован на <span class="highlight">аудиторию 14+</span>, что обеспечивает адекватное общение и дружелюбную обстановку. В сообществе <span class="highlight">нет токсичности</span>, а уважение к другим игрокам – наш ключевой принцип.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+  <div id="mobile-menu" class="mobile-menu">
+    <h1 id="mobile-title"></h1>
+    <p id="mobile-text"></p>
+    <p id="mobile-date" class="mobile-date"></p>
+  </div>
+  <!-- Основной баннер с запросом согласия -->
+<div id="consent-banner">
+  <p>Мы используем файлы cookie для персонализации контента и рекламы. Вы можете согласиться с этим или настроить свои предпочтения.</p>
+  <button id="accept-all">Согласиться</button>
+  <button id="customize-settings">Настроить</button>
+</div>
+
+<!-- Панель настроек cookies -->
+<div id="settings-panel">
+  <p>Вы хотите отключить файлы cookie? Это может повлиять на функциональность сайта.</p>
+  <button id="back">Назад</button>
+  <button id="disable-cookies">Отключить cookies</button>
+</div>
+  
+  <footer class="footer">
+    <div class="container">
+      <a class="s" style="height: 10px;"></a>
+        <div class="social-link-footer">
+            <a href="https://discord.gg/EPgTFRf7Zn" target="_blank" class="social"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.youtube.com/@ShellChain" target="_blank" class="social"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/shellchain" target="_blank" class="social"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+
+        <p>Выражаем благодарность <a target="_blank" href="https://fontawesome.com">FontAwesome</a> за предоставление шрифта,</p>
+        <p>распространяемого под лицензией <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+        <p></a></p>
+        <p>ShellChain &copy; 2025 Все права защищены.</p>
+    </div>
+</footer>
+    <script>
+      // Проверка текущей темы и установка начального состояния
+const switcher = document.getElementById('checkbox');
+const switcher2 = document.getElementById('checkbox2');
+const body = document.body;
+const heroSection = document.querySelector('.hero-section');
+const navbar = document.querySelector('.navbar');
+const contentSection = document.querySelector('.content-section');
+const footer = document.querySelector('.footer');
+// Проверка сохраненной темы из localStorage или установка по умолчанию
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'dark') {
+  body.classList.add('dark-theme');
+  heroSection.style.backgroundImage = "url('/images/night.png')";
+  navbar.style.backgroundColor = '#333';
+  contentSection.classList.add('dark-theme-gradient');
+  heroSection.classList.add('dark-theme-gradient'); // Добавить класс для темной темы
+  footer.classList.add('dark-theme-gradient'); // Добавить класс для светлой темы
+  switcher.checked = false; // Включить чекбокс для темной темы
+  switcher2.checked = false; // Выключить чекбокс для светлой темы
+} else {
+  body.classList.add('light-theme');
+  heroSection.style.backgroundImage = "url('/images/day.png')";
+  navbar.style.backgroundColor = '#999';
+
+  contentSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
+  heroSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
+  footer.classList.add('light-theme-gradient');
+  switcher.checked = true; // Выключить чекбокс для светлой темы
+  switcher2.checked = true; // Выключить чекбокс для светлой темы
+}
+
+function toggleTheme(isLightTheme) {
+  const body = document.querySelector('body');
+  const timeline = document.querySelector('.timeline');
+  const heroSection = document.querySelector('.hero-section');
+  const navbar = document.querySelector('.navbar');
+  const contentSection = document.querySelector('.content-section');
+  const footer = document.querySelector('footer');
+
+  if (isLightTheme) {
+    // Светлая тема
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+    heroSection.style.backgroundImage = "url('/images/day.png')";
+    navbar.style.backgroundColor = '#999';
+    contentSection.classList.remove('dark-theme-gradient');
+    contentSection.classList.add('light-theme-gradient');
+    heroSection.classList.remove('dark-theme-gradient');
+    heroSection.classList.add('light-theme-gradient');
+    footer.classList.remove('dark-theme-gradient');
+    footer.classList.add('light-theme-gradient');
+    localStorage.setItem('theme', 'light');
+  } else {
+    // Темная тема
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+    heroSection.style.backgroundImage = "url('/images/night.png')";
+    navbar.style.backgroundColor = '#333';
+    contentSection.classList.add('dark-theme-gradient');
+    contentSection.classList.remove('light-theme-gradient');
+    heroSection.classList.remove('light-theme-gradient');
+    heroSection.classList.add('dark-theme-gradient');
+    footer.classList.add('dark-theme-gradient');
+    footer.classList.remove('light-theme-gradient');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Пример использования
+switcher.addEventListener('change', function() {
+  toggleTheme(this.checked); // true для светлой темы, false для темной
+});
+
+// Пример использования
+switcher2.addEventListener('change', function() {
+  toggleTheme(this.checked); // true для светлой темы, false для темной
+});
+window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        body.classList.replace('hidden', 'visible');
+      }, 1);
+    });
+    </script>
+        <script src="/script/scriptmain.js"></script>
+        <script src="/script/scriptinfo.js"></script>
+</body>
+</html>
