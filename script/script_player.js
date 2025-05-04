@@ -4,6 +4,7 @@ const translations = {
     players: "Players",
     serverInfo: "Server Info",
     secreta: "কারাবাস কতদিন স্থায়ী হয়েছিল?",
+    secreta2: "Frequently Asked Questions",
     headerTitle: "ShellChain - Home",
     timeline: {
       "2022": {
@@ -30,6 +31,38 @@ const translations = {
         title: "ShellChain",
         description: "Advertising became professional, online, and server quality improved."
       }
+    },
+    faq: {
+      question1: {
+        question: "How to connect to the server?",
+        answer: "You must be a player of the project. If you are already a player, connect to the server using the IP 'server not found'."
+      },
+      question2: {
+        question: "Can I play without a license?",
+        answer: "Yes, you can. You do not need a license to play on our server."
+      },
+      question3: {
+        question: "How to become a ShellChain player?",
+        answer: "You just need to submit an <a target='_blank' href='https://forms.gle/5aMuzsDUfx4pCBdD9'>application!</a>"
+      },
+      question4: {
+        question: "Can I play on my phone?",
+        answer: "The server cannot be launched on the Bedrock version!"
+      },
+      question5: {
+        question: "What is the minimum age to play on the server?",
+        answer: "You can only play from 14 years old or older."
+      },
+      question6: {
+        question: "How to join our community?",
+        answer: "Just click on the <a target='_blank' href='https://discord.com/invite/EPgTFRf7Zn'>link</a> and join our <a target='_blank' href='https://discord.com/invite/EPgTFRf7Zn'>Discord server</a>."
+      }
+    },
+    footer: {
+      attribution: "Thanks to <a target='_blank' href='https://fontawesome.com'>FontAwesome</a> for providing the font,",
+      license: "distributed under the <a target='_blank' href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license.",
+      rightsReserved: "ShellChain © 2025 All rights reserved.",
+      creator: "Website created by <a target='_blank' href='https://cat-bios.github.io'>ArisNow0</a>"
     }
   },
   ru: {
@@ -37,6 +70,7 @@ const translations = {
     players: "Игроки",
     serverInfo: "О сервере",
     secreta: "دريافت اوچتو ٿي.",
+    secreta2: "Часто задаваемые вопросы",
     headerTitle: "ShellChain - Главная",
     timeline: {
       "2022": {
@@ -63,6 +97,38 @@ const translations = {
         title: "ShellChain",
         description: "Реклама стала профессиональной, онлайн и качество сервера улучшились."
       }
+    },
+    faq: {
+      question1: {
+        question: "Как подключиться к серверу?",
+        answer: "Вы должны быть игроком проекта. Если вы уже игрок, зайдите на сервер по IP 'сервер не найден'."
+      },
+      question2: {
+        question: "Можно играть без лицензии?",
+        answer: "Да, можно. Для игры на нашем сервере не нужно иметь лицензию."
+      },
+      question3: {
+        question: "Как стать игроком ShellChain?",
+        answer: "Вам нужно всего лишь подать <a target='_blank' href='https://forms.gle/5aMuzsDUfx4pCBdD9'>заявку!</a>"
+      },
+      question4: {
+        question: "Можно играть на телефоне?",
+        answer: "Сервер не может быть запущен на версии Bedrock!"
+      },
+      question5: {
+        question: "Со скольки можно играть на сервере?",
+        answer: "Можно играть только с 14 лет или старше."
+      },
+      question6: {
+        question: "Как попасть в наше комьюнити?",
+        answer: "Просто перейдите по <a target='_blank' href='https://discord.com/invite/EPgTFRf7Zn'>ссылке</a> и присоединяйтесь к нашему <a target='_blank' href='https://discord.com/invite/EPgTFRf7Zn'>Discord серверу</a>."
+      }
+    },
+    footer: {
+      attribution: "Выражаем благодарность <a target='_blank' href='https://fontawesome.com'>FontAwesome</a> за предоставление шрифта,",
+      license: "распространяемого под лицензией <a target='_blank' href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>.",
+      rightsReserved: "ShellChain © 2025 Все права защищены.",
+      creator: "Сайт создан <a target='_blank' href='https://cat-bios.github.io'>ArisNow0</a>"
     }
   },
   ua: {
@@ -70,6 +136,7 @@ const translations = {
     players: "Гравці",
     serverInfo: "Про сервер",
     secreta: "ရပ်တန့်သင့်သော်လည်း အချိန်နှောင်းသွားပေလိမ့်မည်။",
+    secreta2: "Часті питання",
     headerTitle: "ShellChain - Головна",
     timeline: {
       "2022": {
@@ -96,9 +163,130 @@ const translations = {
         title: "ShellChain",
         description: "Реклама стала професійною, онлайн і якість сервера покращились."
       }
+    },
+    faq: {
+      question1: {
+        question: "Як підключитися до сервера?",
+        answer: "Ви повинні бути гравцем проекту. Якщо ви вже гравець, підключіться до сервера через IP 'сервер не знайдений'."
+      },
+      question2: {
+        question: "Чи можна грати без ліцензії?",
+        answer: "Так, можна. Для гри на нашому сервері не потрібно мати ліцензію."
+      },
+      question3: {
+        question: "Як стати гравцем ShellChain?",
+        answer: "Вам потрібно всього лише подати <a target='_blank' href='https://forms.gle/5aMuzsDUfx4pCBdD9'>заявку!</a>"
+      },
+      question4: {
+        question: "Чи можна грати на телефоні?",
+        answer: "Сервер не може бути запущений на версії Bedrock!"
+      },
+      question5: {
+        question: "З якого віку можна грати на сервері?",
+        answer: "Можна грати тільки з 14 років або старше."
+      },
+      question6: {
+        question: "Як потрапити до нас у ком'юніті?",
+        answer: "Просто перейдіть за <a target='_blank' href='https://discord.com/invite/EPgTFRf7Zn'>посиланням</a> і приєднайтесь до нашого <a target='_blank' href='https://discord.com/invite/EPgTFRf7Zn'>Discord серверу</a>."
+      }
+    },
+    footer: {
+      attribution: "Висловлюємо подяку <a target='_blank' href='https://fontawesome.com'>FontAwesome</a> за наданий шрифт,",
+      license: "який поширюється за ліцензією <a target='_blank' href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>.",
+      rightsReserved: "ShellChain © 2025 Усі права захищено.",
+      creator: "Сайт створений <a target='_blank' href='https://cat-bios.github.io'>ArisNow0</a>"
     }
   }
 };
+
+const translationsCard = {
+  en: {
+    playerCard: {
+      title: "You",
+      description: "The server is just starting to gain players, and you can be one of them! Just submit your <a target='_blank' href='https://forms.gle/5aMuzsDUfx4pCBdD9'>application!</a>",
+    },
+    adminCard: [
+      {
+        name: "Sir_Rodger",
+        status: "Founder",
+        description: "Creator of the server. Develops the storyline but is more of a player than an administrator.",
+      },
+      {
+        name: "ArisNow0",
+        status: "Tech Admin, Second Founder",
+        description: "Develops the storyline, created this website, and handles most of the technical part (well, he is a tech admin).",
+      }
+    ]
+  },
+  ru: {
+    playerCard: {
+      title: "Ты",
+      description: "Сервер только начинает набирать игроков, и ты можешь стать одним из них! Просто подай <a target='_blank' href='https://forms.gle/5aMuzsDUfx4pCBdD9'>заявку!</a>",
+    },
+    adminCard: [
+      {
+        name: "Sir_Rodger",
+        status: "Основатель",
+        description: "Создатель сервера. Разрабатывает сюжет, но в большей части игрок, чем администратор.",
+      },
+      {
+        name: "ArisNow0",
+        status: "Тех. Админ, Второй Основатель",
+        description: "Разрабатывает сюжет, создал этот сайт и вообще занимается почти всей технической частью (ну, он же тех. админ).",
+      }
+    ]
+  },
+  ua: {
+    playerCard: {
+      title: "Ти",
+      description: "Сервер тільки починає набирати гравців, і ти можеш стати одним з них! Просто подай <a target='_blank' href='https://forms.gle/5aMuzsDUfx4pCBdD9'>заявку!</a>",
+    },
+    adminCard: [
+      {
+        name: "Sir_Rodger",
+        status: "Засновник",
+        description: "Створювач сервера. Розробляє сюжет, але в більшій частині гравець, а не адміністратор.",
+      },
+      {
+        name: "ArisNow0",
+        status: "Тех. Адмін, Другий Засновник",
+        description: "Розробляє сюжет, створив цей сайт і взагалі займається майже всіма технічними частинами (ну, він же тех. адміністратор).",
+      }
+    ]
+  }
+};
+
+
+
+function translateCardText(language) {
+  // Перевод для карточки игрока
+  const playerCard = document.querySelector('.player-card');
+  const playerTitle = playerCard.querySelector('h3');
+  const playerDescription = playerCard.querySelector('p');
+  
+  // Переводим карточку игрока
+  if (playerTitle && playerDescription) {
+    playerTitle.textContent = translationsCard[language].playerCard.title;
+    playerDescription.innerHTML = translationsCard[language].playerCard.description; // Используем innerHTML для ссылки
+  }
+
+  // Перевод для карточек администраторов
+  const adminCards = document.querySelectorAll('.admin-card');
+  adminCards.forEach((card, index) => {
+    const adminName = card.querySelector('h3');
+    const adminStatus = card.querySelector('.admin-status');
+    const adminDescription = card.querySelector('p');
+    
+    if (adminName && adminStatus && adminDescription) {
+      adminName.textContent = translationsCard[language].adminCard[index].name;
+      adminStatus.textContent = translationsCard[language].adminCard[index].status;
+      adminDescription.textContent = translationsCard[language].adminCard[index].description;
+    }
+  });
+}
+
+
+
 
 function changeLanguage(language) {
   // Изменяем текст элементов в зависимости от выбранного языка
@@ -106,31 +294,51 @@ function changeLanguage(language) {
   const playersLink = document.querySelector('.navbar .links a:nth-child(2)');
   const serverInfoLink = document.querySelector('.navbar .links a:nth-child(3)');
   const secretLink = document.querySelector('.navbar .links a:nth-child(4)');
-  
-  // Обновляем только текстовые узлы, не трогая иконки
-  homeLink.childNodes.forEach(node => {
-    if (node.nodeType === Node.TEXT_NODE) {
-      node.textContent = translations[language].home; // Только текст, иконки не затрагиваются
-    }
-  });
+  const spanElement = homeLink.querySelector('span');  // Находим span внутри ссылки
+  const faqh1 = document.querySelector('.faq h2:nth-child(1)');
 
-  playersLink.childNodes.forEach(node => {
-    if (node.nodeType === Node.TEXT_NODE) {
-      node.textContent = translations[language].players;
-    }
-  });
+  const footerAttribution = document.querySelector('.footer p:nth-child(3)');
+  const footerLicense = document.querySelector('.footer p:nth-child(4)');
+  const footerRightsReserved = document.querySelector('.footer p:nth-child(6)');
+  const footerCreator = document.querySelector('.footer .creator');
 
-  serverInfoLink.childNodes.forEach(node => {
-    if (node.nodeType === Node.TEXT_NODE) {
-      node.textContent = translations[language].serverInfo;
-    }
-  });
+  if (footerAttribution) {
+    footerAttribution.innerHTML = translations[language].footer.attribution;
+  }
 
-  secretLink.childNodes.forEach(node => {
-    if (node.nodeType === Node.TEXT_NODE) {
-      node.textContent = translations[language].secreta;
+  if (footerLicense) {
+    footerLicense.innerHTML = translations[language].footer.license;
+  }
+
+  if (footerRightsReserved) {
+    footerRightsReserved.textContent = translations[language].footer.rightsReserved;
+  }
+
+  if (footerCreator) {
+    footerCreator.innerHTML = translations[language].footer.creator;
+  }
+
+  if (spanElement) {
+    spanElement.textContent = translations[language].home; // Меняем только текст
+  } else {
+    console.error("Элемент <span> не найден в homeLink");
+  }
+
+  // Функция обновления текста ссылок
+  function updateLinkText(link, translationKey) {
+    const span = link.querySelector('span');
+    if (span) {
+      span.textContent = translations[language][translationKey];
     }
-  });
+  }
+
+  updateLinkText(playersLink, 'players');
+  updateLinkText(serverInfoLink, 'serverInfo');
+  updateLinkText(secretLink, 'secreta');
+
+  if (faqh1) {
+    faqh1.textContent = translations[language].secreta2; // Обновляем заголовок FAQ
+  }
 
   document.title = translations[language].headerTitle;
 
@@ -150,15 +358,29 @@ function changeLanguage(language) {
     }
   });
 
+  // Обновляем FAQ
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item, index) => {
+    const questionKey = `question${index + 1}`;
+    if (translations[language].faq[questionKey]) {
+      const question = translations[language].faq[questionKey].question;
+      const answer = translations[language].faq[questionKey].answer;
+      item.querySelector('p strong').textContent = question;
+      item.querySelector('.answer p').innerHTML = answer; // Используем innerHTML для обработки ссылок
+    }
+  });
+  translateCardText(language);
   // Изменяем флаг
   setCurrentFlag(language);
 }
 
 
 
+
     // Функция для изменения текущего флага
 function setCurrentFlag(language) {
   const currentFlag = document.getElementById("current-flag");
+  const currentFlag2 = document.getElementById("current-flag2");
   let flagSrc = "";
 
   // Устанавливаем флаг в зависимости от языка
@@ -177,10 +399,11 @@ function setCurrentFlag(language) {
 
   // Изменяем изображение флага
   currentFlag.innerHTML = `<img src="${flagSrc}" alt="Current Language" />`;
+  currentFlag2.innerHTML = `<img src="${flagSrc}" alt="Current Language" />`;
 }
     
     // Обработчик кликов по флагам для переключения языка
-    const flags = document.querySelectorAll('.flag');
+    const flags = document.querySelectorAll('.flagd');
     flags.forEach(flag => {
       flag.addEventListener('click', (event) => {
         const lang = event.currentTarget.getAttribute('data-lang');
@@ -192,58 +415,3 @@ function setCurrentFlag(language) {
     // Получаем сохраненный язык из localStorage или используем язык системы
     const savedLang = localStorage.getItem('language') || navigator.language.split('-')[0]; // Получаем язык из localStorage или по умолчанию язык системы
     changeLanguage(savedLang);
-
-
-
-    // Проверка текущей темы и установка начального состояния
-const switcher = document.getElementById('checkbox');
-const body = document.body;
-const heroSection = document.querySelector('.hero-section');
-const navbar = document.querySelector('.navbar');
-const contentSection = document.querySelector('.content-section');
-
-// Проверка сохраненной темы из localStorage или установка по умолчанию
-const currentTheme = localStorage.getItem('theme') || 'dark';
-if (currentTheme === 'dark') {
-  body.classList.add('dark-theme');
-  heroSection.style.backgroundImage = "url('/images/night.png')";
-  navbar.style.backgroundColor = '#333';
-  contentSection.classList.add('dark-theme-gradient');
-  heroSection.classList.add('dark-theme-gradient'); // Добавить класс для темной темы
-  switcher.checked = false; // Включить чекбокс для темной темы
-} else {
-  body.classList.add('light-theme');
-  heroSection.style.backgroundImage = "url('/images/day.png')";
-  navbar.style.backgroundColor = '#999';
-  contentSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
-  heroSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
-  switcher.checked = true; // Выключить чекбокс для светлой темы
-}
-
-// Обработчик переключения темы
-switcher.addEventListener('change', function() {
-  if (this.checked) {
-    // Светлая тема
-    body.classList.remove('dark-theme');
-    body.classList.add('light-theme');
-    heroSection.style.backgroundImage = "url('/images/day.png')";
-    navbar.style.backgroundColor = '#999';
-    contentSection.classList.remove('dark-theme-gradient'); // Добавить класс для светлой темы
-    contentSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
-    heroSection.classList.remove('dark-theme-gradient');
-    heroSection.classList.add('light-theme-gradient'); // Добавить класс для светлой темы
-    localStorage.setItem('theme', 'light');
-  }
-  else {
-    // Темная тема
-    body.classList.remove('light-theme');
-    body.classList.add('dark-theme');
-    heroSection.style.backgroundImage = "url('/images/night.png')";
-    navbar.style.backgroundColor = '#333';
-    contentSection.classList.add('dark-theme-gradient'); // Добавить класс для светлой темы
-    contentSection.classList.remove('light-theme-gradient'); // Добавить класс для светлой темы
-    heroSection.classList.remove('light-theme-gradient');
-    heroSection.classList.add('dark-theme-gradient'); // Добавить класс для темной темы
-    localStorage.setItem('theme', 'dark');
-  }
-});

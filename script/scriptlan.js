@@ -39,7 +39,7 @@ const translations = {
       },
       question2: {
         question: "Can I play without a license?",
-        answer: "No, you cannot. To play on our server, you need to have a license."
+        answer: "Yes, you can. You do not need a license to play on our server."
       },
       question3: {
         question: "How to become a ShellChain player?",
@@ -105,7 +105,7 @@ const translations = {
       },
       question2: {
         question: "Можно играть без лицензии?",
-        answer: "Нет, нельзя. Для игры на нашем сервере нужно иметь лицензию."
+        answer: "Да, можно. Для игры на нашем сервере не нужно иметь лицензию."
       },
       question3: {
         question: "Как стать игроком ShellChain?",
@@ -171,7 +171,7 @@ const translations = {
       },
       question2: {
         question: "Чи можна грати без ліцензії?",
-        answer: "Ні, не можна. Для гри на нашому сервері потрібно мати ліцензію."
+        answer: "Так, можна. Для гри на нашому сервері не потрібно мати ліцензію."
       },
       question3: {
         question: "Як стати гравцем ShellChain?",

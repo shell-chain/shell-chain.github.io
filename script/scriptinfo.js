@@ -2,6 +2,9 @@ translations2 = {
   en: {
     serverTitle: "ShellChain - About the server",
     aboutServer: "ShellChain is a <span class='highlight'>unique and atmospheric SMP Minecraft server</span> that brings together vanilla gameplay lovers with custom additions, deep lore, and a well-thought-out community.",
+    about: "About the server",
+    feature: "Features",
+    communitys: "Our community",
     features: {
       immersion: {
         title: "Total Immersion",
@@ -21,6 +24,9 @@ translations2 = {
   ru: {
     serverTitle: "ShellChain – О сервере",
     aboutServer: "ShellChain – это <span class='highlight'>уникальный и атмосферный SMP Minecraft сервер</span>, который объединяет любителей ванильного геймплея с авторскими дополнениями, глубоким сюжетом и продуманным комьюнити.",
+    about: "О сервере",
+    feature: "Особенности",
+    communitys: "Наше комьюнити",
     features: {
       immersion: {
         title: "Полное погружение",
@@ -40,6 +46,9 @@ translations2 = {
   ua: {
     serverTitle: "ShellChain - Про сервер",
     aboutServer: "ShellChain – це <span class='highlight'>унікальний та атмосферний SMP Minecraft сервер</span>, який об'єднує любителів ванільного геймплею з авторськими доповненнями, глибоким сюжетом і продуманим ком'юніті.",
+    about: "Про сервер",
+    feature: "Особливості",
+    communitys: "Наше комьюнити",
     features: {
       immersion: {
         title: "Повне занурення",
@@ -284,6 +293,9 @@ function changeLanguage(language) {
   const secretLink = document.querySelector('.navbar .links a:nth-child(4)');
   const spanElement = homeLink.querySelector('span');  // Находим span внутри ссылки
   const faqh1 = document.querySelector('.faq h2:nth-child(1)');
+  const abouth2 = document.querySelector('.server-info-container .info-block:nth-child(2) h2');
+  const featureh2 = document.querySelector('.server-info-container .info-block:nth-child(3) h2');
+  const communityh2 = document.querySelector('.server-info-container .info-block:nth-child(4) h2');
 
   const footerAttribution = document.querySelector('.footer p:nth-child(3)');
   const footerLicense = document.querySelector('.footer p:nth-child(4)');
@@ -319,8 +331,17 @@ function changeLanguage(language) {
       span.textContent = translations[language][translationKey];
     }
   }
-
+  function updateLinkText2(link, translationKey) {
+    const span = link.querySelector('span');
+    if (span) {
+      span.textContent = translations2[language][translationKey];
+    }
+  }
+  
   updateLinkText(playersLink, 'players');
+  updateLinkText2(abouth2, 'about');
+  updateLinkText2(featureh2, 'feature');
+  updateLinkText2(communityh2, 'communitys');
   updateLinkText(serverInfoLink, 'serverInfo');
   updateLinkText(secretLink, 'secreta');
 
