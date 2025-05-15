@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ShellChain Приглашение</title>
+  <style>
+    @font-face {
+      font-family: 'Vertiger';
+      src: url('Vertiger.otf') format('opentype');
+    }
+
+    body {
+      font-family: 'Vertiger', sans-serif;
+      text-align: center;
+      padding: 20px;
+      font-size: 30px;
+    }
+
+    canvas {
+      border: 1px solid #002566;
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 42px;
+      font-family: 'Vertiger', sans-serif;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 42px;
+      margin-left: 10px;
+      font-family: 'Vertiger', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ShellChain Приглашение</h1>
+  <input type="text" id="nickname" placeholder="Введите никнейм">
+  <button onclick="generate()">Создать</button>
+
+  <canvas id="canvas" width="863" height="876"></canvas>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const imageSrc = 'img.png';
+    const background = new Image();
+    background.src = imageSrc;
+
+    // Обработка переносов строк и ширины текста
+function wrapText(ctx, text, x, y, maxWidth, lineHeight, color = '#000') {
+    ctx.fillStyle = color;
+    const paragraphs = text.split('\n');
+    for (let p = 0; p < paragraphs.length; p++) {
+      const words = paragraphs[p].split(' ');
+      let line = '';
+      for (let i = 0; i < words.length; i++) {
+        const testLine = line + words[i] + ' ';
+        const metrics = ctx.measureText(testLine);
+        const testWidth = metrics.width;
+        if (testWidth > maxWidth && i > 0) {
+          ctx.fillText(line, x, y);
+          line = words[i] + ' ';
+          y += lineHeight;
+        } else {
+          line = testLine;
+        }
+      }
+      ctx.fillText(line, x, y);
+      y += lineHeight;
+    }
+  }
+
+    function generate() {
+      const name = document.getElementById('nickname').value || 'ArisNow0';
+    const greeting = `Привет, ${name}!`;
+    const message = `ПРИГЛАШАЕМ ТЕБЯ ПРИНЯТЬ УЧАСТИЕ НА СВО.
+    
+МЫ ИЩЕМ СМЕЛЫХ. НАДЁЖНЫХ И ОТВЕТСТВЕННЫХ ЛЮДЕЙ, ГОТОВЫХ СЛУЖИТЬ СВОЕМУ ДЕЛУ. 
+СВО — ЭТО ВОЗМОЖНОСТЬ ВНЕСТИ ВКЛАД В. 
+ЗАЩИТУ ИНТЕРЕСОВ И БЕЗОПАСНОСТИ НАШЕЙ СТРАНЫ. 
+ТЕБЯ ЖДЁТ СПЛОЧЁННЫЙ КОЛЛЕКТИВ, ЧЁТКИЕ ЗАДАЧИ И ПОДДЕРЖКА БОЕВЫХ ТОВАРИЩЕЙ. 
+
+ЕСЛИ ТЫ ГОТОВ — ПРИСОЕДИНЯЙСЯ К НАМ.`;
+
+      background.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#000';
+        ctx.font = '45px Vertiger';
+        const textX = 102;
+        let textY = 249;
+        const textWidth = 337;
+        const lineHeight = 36;
+
+  // Отрисовка первой строки другим цветом
+      wrapText(ctx, greeting, textX, textY, textWidth, lineHeight, '#002566');
+      textY += lineHeight; // сдвиг вниз после приветствия
+
+      // Отрисовка остального текста
+      wrapText(ctx, message, textX, textY, textWidth, lineHeight, '#000');
+    };
+
+    if (background.complete) {
+      background.onload();
+    }
+  }
+</script>
+
+</body>
+</html>
